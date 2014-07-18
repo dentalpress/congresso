@@ -17,10 +17,7 @@ html, body {height: 100%;}
 body {overflow-x: hidden;}
 
 // Configuração para pagina
-.page {
-    min-height: 100%
-
-}
+.page {  min-height: 100% }
 
 // Configura abertura
 #abertura{
@@ -28,6 +25,7 @@ body {overflow-x: hidden;}
     position: absolute;
     top: 0%;
     z-index: 99!important;
+    background-color: rgb(5, 30, 65);
 
     // Configura box abertura
     .abertura{
@@ -93,38 +91,71 @@ body {overflow-x: hidden;}
         }
     }
 
-    // configura barra do menu
+    // Configuração do menu
     .menu {
         height: 31px;
         background-color: rgb(171, 159, 131);
 
-        ul{
-            li {
-                margin: 0;
-                padding: 0;
+        // configura menu group
+        .menu-group {
+            width: 1200px;
+            margin: 0 auto;
 
-                a{
-                    font-size: 15px;
-                    font-weight: 100;
-                    text-transform: uppercase;
-                    color: white;
-                    padding: 5px 10px;
-                    border-radius: 0px;
+            // configura botão
+            .btn-menu{
+                width: 55px;
+                padding: 7px;
+                float: left;
+                margin-right: 36px;
 
-                    &:hover{
-                        background-color: rgb(77, 95, 120);
+                .icon-bar { border: 1px solid #FFF; }
+            }
+
+
+            // configura barra do menu
+            .menu-group-nav {
+                float: left;
+
+                // Lista de itens do menu
+                .menu-group-nav-list {
+                    margin: 0;
+                    padding: 0;
+
+                    // Configura links individuais
+                    .menu-group-nav-item {
+                        font-size: 15px;
+                        font-weight: 100;
+                        text-transform: uppercase;
+                        color: white;
+                        padding: 5px 15px;
+                        border-radius: 0px;
+
+                        // Quando o mouse encima
+                        &:hover { background-color: rgba(255, 255, 255, 0.36); }
+
+                        // Sub itens
+                        &.menu-group-nav-item-sub {
+                            display: none;
+                        }
+                    }
+
+                    // Configura inscricao
+                    &.inscricao {
+                        background-color: rgb(100, 192, 100);
+
+                        // Configura quando o mouse
+                        .menu-group-nav-item:hover { background-color: rgb(100, 192, 100); font-weight: 500;}
                     }
                 }
             }
         }
-
     }
 }
 
 // Configura os conteudos
 #contents {
     position: relative;
-    top: 100%;
+    top: 105%;
     margin-top: 50px;
 }
 
