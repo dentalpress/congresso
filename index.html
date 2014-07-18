@@ -139,7 +139,7 @@
         <div id="contents" class="row">
 
             <!-- Abertura com as informações do congresso -->
-            <section class="container segmento" id="home" data-url-positino="home">
+            <section class="container segmento" id="home" data-url-position="home">
 
                 <!-- Sobre o congresso -->
                 <article class="segmento-item">
@@ -304,7 +304,7 @@
             </section>
 
             <!-- Local -->
-            <section class="container segmento" id="local" data-url-positino="local">
+            <section class="container segmento" id="local" data-url-position="local">
 
 
                 <!-- Texto curto sobre o local -->
@@ -365,79 +365,107 @@
             </section>
 
             <!-- Contato -->
-            <section class="container segmento" id="contato" data-url-positino="contato">
+            <section class="container segmento" id="contato" data-url-position="contato">
 
-                <!-- Marcador de seção -->
-                <h1 class="segmento-item-marcador">A Cidade</h1>
+                <!-- Contato  -->
+                <article class="segmento-item">
 
-                <!--  Fomulário de envio -->
-                <div class="row">
+                    <!-- Marcador de seção -->
+                    <h1 class="segmento-item-marcador">A Cidade</h1>
 
-                    <!-- informações para contato -->
-                    <div class="well col-md-4 text-center">
-                        <i>Ligue gratuitamente</i>
-                        <h2 class="text-danger">0800 600 9818</h2>
-                    </div>
+                    <!--  Fomulário de envio -->
+                    <div class="row">
 
-                    <!-- Formulário -->
-                    <div class="col-md-8">
+                        <!-- informações para contato -->
+                        <div class="well col-md-4 text-center">
+                            <i>Ligue gratuitamente</i>
+                            <h2 class="text-danger">0800 600 9818</h2>
+                        </div>
 
-                        <form class="form-horizontal">
+                        <!-- Formulário -->
+                        <div class="col-md-8">
 
-                            <fieldset>
+                            <form class="form-horizontal">
 
-                                <!-- Nome do formulário -->
-                                <input id="curso[nome]" name="curso[nome]" type="hidden" value="8º Congresso Dental Press">
+                                <fieldset>
 
-                                <!-- Nome -->
-                                <div class="form-group col-md-12">
-                                    <input id="Name" name="Name" type="text" placeholder="Seu nome" class="form-control input-lg text-center" required="">
-                                </div>
+                                    <!-- Nome do formulário -->
+                                    <input id="curso[nome]" name="curso[nome]" type="hidden" value="8º Congresso Dental Press">
 
-                                <!-- Telefone -->
-                                <div class="form-group col-md-12">
-                                    <input id="Phone" name="Phone" type="text" placeholder="Seu telefone - (00) 0000-0000" class="form-control input-lg text-center" required="">
-                                </div>
-
-                                <!-- E-mail-->
-                                <div class="form-group col-md-12">
-                                    <input id="Email" name="Email" type="text" placeholder="Seu email" class="form-control input-lg text-center" required="">
-                                </div>
-
-                                <!-- Mensagem -->
-                                <div class="form-group col-md-12">
-                                    <textarea class="form-control input-lg text-center" id="Msg" name="Msg" placeholder="Digite uma mensagem ..."></textarea>
-                                </div>
-
-                                <!-- Button -->
-                                <div class="col-md-12">
+                                    <!-- Nome -->
                                     <div class="form-group col-md-12">
-                                        <button data-loading-text="Enviando <span class='glyphicon glyphicon-envelope'></span>" id="send" name="send" class="btn btn-primary btn-lg">Enviar</button>
-
-                                        <!-- Quando o envio for um sucesso -->
-                                        <p class="text-success form-success hidden">
-                                            <span class='glyphicon glyphicon-ok-sign'></span> 
-                                            Muito obrigado recebemos seu contato, por gentileza aguarde que retornaremos o mais breve possível.
-                                        </p>
-
-                                        <!-- Quando o envio der errado -->
-                                        <p class="text-danger form-erro hidden">
-                                            <span class='glyphicon glyphicon-exclamation-sign'></span> 
-                                            Opa! Houve algum erro, recarrege a página e tente novamente ou 
-                                            entre em contato pelo email <strong class="text-primary">cursos@dentalpres.com.br</strong>, 
-                                            ou pelos telefones <strong class="text-primary">0800 600 9818</strong> e 
-                                            <strong class="text-primary">(44) 3031-9818</strong> de segunda a sexta em horário comercial.
-                                        </p>
+                                        <input id="Name" name="Name" type="text" placeholder="Seu nome" class="form-control input-lg text-center" required="">
                                     </div>
-                                </div>
-                            </fieldset>
-                        </form>
+
+                                    <!-- Telefone -->
+                                    <div class="form-group col-md-12">
+                                        <input id="Phone" name="Phone" type="text" placeholder="Seu telefone - (00) 0000-0000" class="form-control input-lg text-center" required="">
+                                    </div>
+
+                                    <!-- E-mail-->
+                                    <div class="form-group col-md-12">
+                                        <input id="Email" name="Email" type="text" placeholder="Seu email" class="form-control input-lg text-center" required="">
+                                    </div>
+
+                                    <!-- Mensagem -->
+                                    <div class="form-group col-md-12">
+                                        <textarea class="form-control input-lg text-center" id="Msg" name="Msg" placeholder="Digite uma mensagem ..."></textarea>
+                                    </div>
+
+                                    <!-- Button -->
+                                    <div class="col-md-12">
+                                        <div class="form-group col-md-12">
+                                            <button data-loading-text="Enviando <span class='glyphicon glyphicon-envelope'></span>" id="send" name="send" class="btn btn-primary btn-lg">Enviar</button>
+
+                                            <!-- Quando o envio for um sucesso -->
+                                            <p class="text-success form-success hidden">
+                                                <span class='glyphicon glyphicon-ok-sign'></span> 
+                                                Muito obrigado recebemos seu contato, por gentileza aguarde que retornaremos o mais breve possível.
+                                            </p>
+
+                                            <!-- Quando o envio der errado -->
+                                            <p class="text-danger form-erro hidden">
+                                                <span class='glyphicon glyphicon-exclamation-sign'></span> 
+                                                Opa! Houve algum erro, recarrege a página e tente novamente ou 
+                                                entre em contato pelo email <strong class="text-primary">cursos@dentalpres.com.br</strong>, 
+                                                ou pelos telefones <strong class="text-primary">0800 600 9818</strong> e 
+                                                <strong class="text-primary">(44) 3031-9818</strong> de segunda a sexta em horário comercial.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </div>
                     </div>
-                </div>
+                </article>
+            </section>
+
+            <!-- Informações -->
+            <section class="container segmento" id="informacoes" data-url-position="informacoes">
+
+                <!-- Fotos dos congressos anteriores -->
+                <article class="segmento-item">
+
+                    <!-- Marcador -->
+                    <h1 class="segmento-item-marcador">Informações</h1>
+
+                    <h1>Voos</h1>
+
+                    <h3>Voos que chegam a Maringá</h3>
+                    <!-- Tabela de voos -->
+
+                    <h3>Voos que saem de Maringá</h3>
+                    <!-- Tabela de voos -->
+
+
+                    <h1>Hotéis</h1>
+                    <!-- Lista de hotéis -->
+
+                </article>
             </section>
 
             <!-- Fotos -->
-            <section class="container segmento" id="fotos" data-url-positino="fotos">
+            <section class="container segmento" id="fotos" data-url-position="fotos">
 
                 <!-- Fotos dos congressos anteriores -->
                 <article class="segmento-item">
@@ -471,7 +499,7 @@
             </section>
 
             <!-- Inscricao -->
-            <section class="container segmento" id="inscricao" data-url-positino="inscricao">
+            <section class="container segmento" id="inscricao" data-url-position="inscricao">
 
                 <!-- Aviso de redirecionamento para a finalização da compra -->
                 <article class="segmento-item">
@@ -577,43 +605,19 @@
                 </article>
 
                 <!-- Inscrição via telefone -->
-                <article class="segmento-item">
+                <article class="segmento-item text-center">
 
                     <!-- Informações de texto -->
                     <h2>Ligue e faça também sua inscrição através de alguma de nossas atendentes.</h2>
 
                     <h1>0800 600 9818 / (44) 3031-9818</h1>
 
-                    <p>Short description, Isquamus mi, sum qui beris ditem qui sed escias quia sitatio min cum <b>doluptiandi</b> quae re <i>sunti</i> atet int pa volorpo reperfe ruptati verrovidebis aut lantiis modi aut et officae voluptaquas dolupic toreperum quae nis et eaquide volupta ssimus aut voluptam se nimusam, qui omniminimus dis modissime omnis dolor seri doloribus et hiciist.</p>
-                </article>
-            </section>
-
-            <!-- Informações -->
-            <section class="container segmento" id="informacoes" data-url-positino="informacoes">
-
-                <!-- Fotos dos congressos anteriores -->
-                <article class="segmento-item">
-
-                    <!-- Marcador -->
-                    <h1 class="segmento-item-marcador">Informações</h1>
-
-                    <h1>Voos</h1>
-
-                    <h3>Voos que chegam a Maringá</h3>
-                    <!-- Tabela de voos -->
-
-                    <h3>Voos que saem de Maringá</h3>
-                    <!-- Tabela de voos -->
-
-
-                    <h1>Hotéis</h1>
-                    <!-- Lista de hotéis -->
-
+                    <p>Atendimento das 08:00 as 18:00 de segunda a sexta.</p>
                 </article>
             </section>
 
             <!-- Amostra 3º Prêmio Décio Rodrigues Martins -->
-            <section class="container segmento" id="amostra" data-url-positino="amostra">
+            <section class="container segmento hidden" id="amostra" data-url-position="amostra">
 
                 <!-- Texto curto sobre o premio e sobre o que se trata -->
                 <article class="segmento-item">
@@ -687,7 +691,7 @@
             </section>
 
             <!-- Inscritos -->
-            <section class="container segmento" id="inscritos" data-url-positino="inscritos">
+            <section class="container segmento hidden" id="inscritos" data-url-position="inscritos">
 
                 <!-- Fotos dos congressos anteriores -->
                 <article class="segmento-item">
@@ -748,9 +752,8 @@
         <script type="text/coffeescript" src="assets/library/coffe/menu.app.coffe"></script>
         -->
 
-        <!-- LIBRARY coffe: Coffee for URL Get RashTag 
-        <script type="text/coffeescript" src="assets/library/coffe/url.app.coffe"></script>
-        -->
+        <!-- LIBRARY coffe: Coffee for URL Get RashTag -->
+        <script type="text/coffeescript" src="assets/library/coffee/url.app.coffee"></script>
 
         <!-- LIBRARY coffe: Coffe for submit form 
         <script type="text/coffeescript" src="assets/library/coffe/form.app.coffe"></script>
