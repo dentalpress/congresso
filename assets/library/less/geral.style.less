@@ -12,3 +12,119 @@
 // IMPORTA "ITENS FREQUENTES" //
 @import "geral.itens.less";
 
+html, body {height: 100%;}
+
+body {overflow-x: hidden;}
+
+// Configuração para pagina
+.page {
+    min-height: 100%
+
+}
+
+// Configura abertura
+#abertura{
+    width: 100%;
+    position: absolute;
+    top: 0%;
+    z-index: 99!important;
+
+    // Configura box abertura
+    .abertura{
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        z-index: 10!important;
+        background-color: rgb(5, 30, 65);
+
+        // Configura logomarca
+        .logo-img {
+            height: 60%;
+            margin-top: 5%;
+        }
+
+        // configura as informacoes
+        .informacoes {
+
+            h1 {
+                font-size: 2em;
+                font-weight: 100;
+                color: white;
+            }
+            h2 {
+                font-size: 1.3em;
+                font-weight: 100;
+                color: white;
+            }
+        }
+
+        // Configura icone da abertura
+        .abertura-icon {
+            margin-top: 50px;
+            font-size: 4em;
+            color: white!important;
+            text-decoration: none; 
+        }
+    }
+}
+
+// Configura o menu
+#menu {
+    width: 100%;
+    background-color: rgb(5, 30, 65);
+    position: fixed;
+    top: 0px;
+    z-index: -1;
+
+    // Configura barra do topo 
+    .topo {
+        padding: 0px;
+        width: 1200px;
+        height: 85px;
+        margin: 0 auto;
+
+        // configura logo do topo
+        .logo-congresso {
+            display: inline-block;
+            margin-top: 16px;
+
+            // figura
+            img{ height: 51px }
+        }
+    }
+
+    // configura barra do menu
+    .menu {
+        height: 31px;
+        background-color: rgb(171, 159, 131);
+
+        ul{
+            li {
+                margin: 0;
+                padding: 0;
+
+                a{
+                    font-size: 15px;
+                    font-weight: 100;
+                    text-transform: uppercase;
+                    color: white;
+                    padding: 5px 10px;
+                    border-radius: 0px;
+
+                    &:hover{
+                        background-color: rgb(77, 95, 120);
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+// Configura os conteudos
+#contents {
+    position: relative;
+    top: 100%;
+    margin-top: 50px;
+}
+
