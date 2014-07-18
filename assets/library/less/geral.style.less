@@ -38,10 +38,12 @@ h1.segmento-item-marcador {
 
 // Configura textos
 p {
+    display: block;
+    margin-bottom: 35px;
     font-size: 20px; 
     font-weight: 100; 
     line-height: 59px; 
-    color: rgb(153, 153, 153); 
+    color: rgb(153, 153, 153);
 
     // outros elementos dentro de paragráfo
     b, strong {font-weight: 500;}
@@ -49,12 +51,28 @@ p {
     a {font-weight: inherit;}
 }
 
-// Configura lista
-li {font-size: 20px; font-weight: 100; color: rgb(153, 153, 153)}
+
+.p {
+    display: block;
+    margin-bottom: 35px;
+    font-size: 20px; 
+    font-weight: 100; 
+    line-height: 59px; 
+    color: rgb(153, 153, 153);
+
+    // Configura lista
+    ul, ol { margin-bottom: 20px; }
+    li {
+            font-size: 20px;
+            font-weight: 100;
+            line-height: 45px;
+            color: rgb(153, 153, 153);
+    }
+}
+
 
 
 // CONFIGURA ELEMENTOS FREQUENTES //
-
 // Configura tabela de inscrição
 .table-inscricao {
     // Configurações globais para itens
