@@ -100,3 +100,97 @@ p {
     }
 
 }
+
+// Configura galeria de imagens
+.figure-group {
+    .clearboth();
+    margin-bottom: 50px;
+
+    // Itens da galeria como fotos e botoes
+    .figure-group-item {
+        padding: 0px;
+        overflow: hidden;
+        text-decoration: none;
+        color: inherit;
+
+        // Imagem do item
+        img {
+            min-width: 100%;
+            min-height: 100%;
+        }
+
+        // Botão
+        .figure-group-item-btn {            
+            font-weight: 200;
+            color: white;
+            display: inline-block;
+            position: absolute;
+            top: 37%;
+            right: 42%;
+            opacity: 0;
+        }
+
+        // Mouse em cima
+        &:hover{
+
+            // Configura quando o botão
+            .figure-group-item-btn{ opacity: 0.7; }
+        }
+    }
+
+    // Botão de exibir outros itens
+    .figure-group-item-mais {
+        font-size: 24px;
+        font-weight: 100;
+        text-align: center;
+        color: white;
+        background-color: rgb(171, 159, 131);
+        opacity: 0.7;
+        cursor: pointer;
+
+        // Quando o mouse encima
+        &:hover{ opacity: 1; }
+    }
+
+
+
+    // Configura tamanhos //
+    // Configura os tamanhos dos itens
+    .figure-group-item {
+        
+        // Quando MD: >= 992px
+        &.col-md-4{
+            width: 28%;
+            height: 210px;
+            margin: 10px;
+
+            // remove a primeira margin
+            &:first-child {margin-left:0;}
+
+            // remove a ultima margin
+            &:last-child {margin-right:0;}
+
+            // Configura tamanho do icone
+            .figure-group-item-btn{ font-size: 53px; }
+        }
+    }
+
+    // Configura tamanho de "exibir mais"
+    .figure-group-item-mais {
+
+        // Quando MD: >= 992px
+        &.col-md-1 {
+            font-size: 15px;
+            font-weight: 300;
+            float: right;
+            width: 10%;
+            height: 210px;
+            margin: 10px 0;
+            padding: 85px 0 0 0;
+        }
+    }
+}
+
+
+
+
