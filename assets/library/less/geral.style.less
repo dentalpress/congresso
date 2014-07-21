@@ -188,27 +188,55 @@ body {overflow-x: hidden;}
             // Itens
             .cronograma-table-item{
 
-                // Confiura horario
-                .cronograma-group-time {
-                    display: block;
-                    min-width: 150px;
-                    text-align: center;
-
-                    // Bloco de tempo
-                    .cronograma-tema-time-item{
-                        background-color: rgb(5, 30, 65);
-                        color: white;
-                        font-weight: 100;
-                        font-size: 14px;
-                        border-radius: 0;
-                        display: inline-block;
-                    }
-                }
-
                 // remove borda do primeiro item
                 &:first-child {
                     td { border: 0; }
                 }
+
+                // Todos os elementos são vreticalmente centralizados
+                * {vertical-align: middle;}
+
+                // Confiura horario
+                .cronograma-group-time {
+                    width: 15%;
+                    text-align: center;
+
+                    // Bloco de tempo
+                    .cronograma-tema-time-item {
+                        display: inline-block;
+                        font-weight: 100;
+                        font-size: 14px;
+                        color: white;
+                        background-color: rgb(5, 30, 65);
+                        border-radius: 0;
+                        margin: 5px;
+                    }
+                }
+
+                // Configura Imagem
+                .cronograma-table-foto {
+                    width: 100px;
+                    text-align: right;
+
+                    // imagem
+                    img{ width: 80px; height: 110px;}
+                }
+
+                // Configura Nome do palestrante
+                .cronograma-table-palestrante {
+                    width: 20%;
+                    text-align: left;
+
+                    h1{ font-size: 25px; line-height: 51px; margin: 0px;}                    
+                }
+
+                // Configura tema do palestrante
+                .cronograma-table-tema {
+                    text-align: left;
+
+                    p{ font-size: 18px; line-height: 22px; margin: 0px; }
+                }
+
             }
         }
     }
