@@ -242,33 +242,43 @@ body {overflow-x: hidden;}
     }
 }
 
-
 // Configura palestrantes
 #palestrantes{
 
     // ficha do palestrante
     .palestrante-item {
+        margin-bottom: 10%;
 
         // bloco da foto do palestrante
         .palestrante-item-foto{
+            margin-right: 30px;
 
             // foto
-            img{}
+            img{ min-width: 260px; }
         }
 
         // Nome do palestrante
-        .palestrante-item-nome {
-
-        }
+        .palestrante-item-nome { margin: 0px; }
 
         // Bloco de dados do palestrante
         .palestrante-item-info {
+            margin-bottom: 30px;
 
+            // configura qualquer item interno
+            *{
+                    margin: 0px;
+                    padding:0px;
+                    line-height: normal;
+            }
         }
 
         // Informações sobre o tema
         .palestrante-item-tema {
 
+            // configura qualquer item interno
+            * {line-height: normal;}
         }
     }
 }
+
+
