@@ -19,49 +19,23 @@ body {overflow-x: hidden;}
 // Configuração para pagina
 .page {  min-height: 100% }
 
-// Configura abertura
-#abertura{
-    width: 100%;
-    position: absolute;
-    top: 0%;
-    z-index: 99!important;
-    background-color: rgb(5, 30, 65);
+// Configura os conteudos
+#contents {
+    position: relative;
+    top: 100%;
+    margin-top: 230px;
 
-    // Configura box abertura
-    .abertura{
-        width: 100%;
-        height: 100%;
-        text-align: center;
-        z-index: 10!important;
-        background-color: rgb(5, 30, 65);
+    // Configura segmento
+    .segmento {
+        min-height: 100%;
+        padding-bottom: 10%;
+        margin-bottom: 2%;
+        margin-top: 10%;
+        border-bottom: 1px dashed rgb(240, 240, 240);
 
-        // Configura logomarca
-        .logo-img {
-            height: 60%;
-            margin-top: 5%;
-        }
-
-        // configura as informacoes
-        .informacoes {
-
-            h1 {
-                font-size: 2em;
-                font-weight: 100;
-                color: white;
-            }
-            h2 {
-                font-size: 1.3em;
-                font-weight: 100;
-                color: white;
-            }
-        }
-
-        // Configura icone da abertura
-        .abertura-icon {
-            margin-top: 50px;
-            font-size: 4em;
-            color: white!important;
-            text-decoration: none; 
+        .segmento-item {
+            display: block;
+            margin: 10% 0;
         }
     }
 }
@@ -152,24 +126,91 @@ body {overflow-x: hidden;}
     }
 }
 
-// Configura os conteudos
-#contents {
-    position: relative;
-    top: 100%;
-    margin-top: 230px;
+// CONFIGURA PAGINAS //
 
-    // Configura segmento
-    .segmento {
-        min-height: 100%;
-        padding-bottom: 10%;
-        margin-bottom: 2%;
-        margin-top: 10%;
-        border-bottom: 1px dashed rgb(240, 240, 240);
+// Configura abertura
+#abertura{
+    width: 100%;
+    position: absolute;
+    top: 0%;
+    z-index: 99!important;
+    background-color: rgb(5, 30, 65);
 
-        .segmento-item {
-            display: block;
-            margin: 10% 0;
+    // Configura box abertura
+    .abertura{
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        z-index: 10!important;
+        background-color: rgb(5, 30, 65);
+
+        // Configura logomarca
+        .logo-img {
+            height: 60%;
+            margin-top: 5%;
+        }
+
+        // configura as informacoes
+        .informacoes {
+
+            h1 {
+                font-size: 2em;
+                font-weight: 100;
+                color: white;
+            }
+            h2 {
+                font-size: 1.3em;
+                font-weight: 100;
+                color: white;
+            }
+        }
+
+        // Configura icone da abertura
+        .abertura-icon {
+            margin-top: 50px;
+            font-size: 4em;
+            color: white!important;
+            text-decoration: none; 
         }
     }
 }
 
+// Configura programacao
+#programacao {
+
+    // Configura cronograma group
+    .cronograma-group {
+
+        // quando tabela
+        .cronograma-table {
+            margin: 3% 0;
+
+            // Itens
+            .cronograma-table-item{
+
+                // Confiura horario
+                .cronograma-group-time {
+                    display: block;
+                    min-width: 150px;
+                    text-align: center;
+
+                    // Bloco de tempo
+                    .cronograma-tema-time-item{
+                        background-color: rgb(5, 30, 65);
+                        color: white;
+                        font-weight: 100;
+                        font-size: 14px;
+                        border-radius: 0;
+                        display: inline-block;
+                    }
+                }
+
+                // remove borda do primeiro item
+                &:first-child {
+                    td { border: 0; }
+                }
+            }
+        }
+    }
+    
+}
