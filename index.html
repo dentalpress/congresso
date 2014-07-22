@@ -473,7 +473,7 @@
 
                                     <!-- Foto do palestrante -->
                                     <td class="cronograma-table-foto">
-                                        <img src="assets/contents/palestrantes/Leopoldino Capelozza.jpg" alt="Leopoldino Capelozza">
+                                        <img src="assets/contents/palestrantes/leopoldino-capelozza.jpg" alt="Leopoldino Capelozza">
                                     </td>
 
                                     <!-- Nome do palestrante -->
@@ -565,7 +565,7 @@
 
                                     <!-- Foto do palestrante -->
                                     <td class="cronograma-table-foto">
-                                        <img src="assets/contents/palestrantes/Benedict Wilmes.jpg" alt="Benedict Wilmes">
+                                        <img src="assets/contents/palestrantes/benedict-wilmes.jpg" alt="Benedict Wilmes">
                                     </td>
 
                                     <!-- Nome do palestrante -->
@@ -769,7 +769,7 @@
                                     </td>
                                 </tr>
 
-                                <!-- Palestrante: nome_do_palestrante -->
+                                <!-- Palestrante: Encerramento -->
                                 <tr class="cronograma-table-item">
 
                                     <!-- Horário do palestrante  -->
@@ -810,7 +810,7 @@
 
                         <!-- Foto do palestrante -->
                         <a class="pull-left palestrante-item-foto" href="#">
-                            <img class="media-object" src="http://placehold.it/260x357" alt="">
+                            <img class="media-object" src="assets/contents/palestrantes/benedict-wilmes.jpg" alt="Benedict Wilmes">
                         </a>
 
                         <!-- Nome, curriculum e temas -->
@@ -1673,6 +1673,13 @@
         <!-- LIBRARY coffe: Coffe for submit form 
         <script type="text/coffeescript" src="assets/library/coffe/form.app.coffe"></script>
         -->
+
+        <!-- VENDOR: htmlGetSQL -->
+        <script type="text/coffeescript" src="assets/vendor/htmlGetSQL/coffee/pull.coffee"></script>
+
+        <script type="text/coffeescript">
+            $.pull_values $(document)
+        </script>
 
     </body>
 </html>
