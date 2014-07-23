@@ -59,9 +59,9 @@ $.parser_values_request = (me, data, val) -> #recebe função
                 return value.me.attr("value") if value.return
 
             when "class" # quando for uma classe
-                value.me.addClass(value.val) if val.return
-                value.me.data("template-request-class", value.val) if !value.return
-                value.me.data("template-request-class")[value.return] if value.return
+                value.me.addClass(value.val) if !val.return
+                value.me.data("template-request-class", value.val) if value.return
+                # value.me.data("template-request-class")[value.return] if !value.return
 
             when "template-toogle" # quando for um toogle
                 value.me.data("template-request-toogle", value.val) if !value.return
@@ -348,7 +348,6 @@ $.pull_values = (html) ->
                 temp['count'][temp['position']]++ 
                 # fim de loop
 
-
             ## preencho os conteudos de cada galeria ##
             #redefino que count naposicao atual e um objeto
             temp['count'][temp['position']] = {}
@@ -362,7 +361,7 @@ $.pull_values = (html) ->
             # loop para gallery, selecionando cada incidente
             while temp['count'][temp['position']]['gallery'] < temp['return'].length
 
-                #defino em this eu no momento atual
+                # defino em this eu no momento atual
                 pull[temp['position']].gallery.this = pull[temp['position']].gallery.eq(temp['count'][temp['position']]['gallery'])
 
                 # defino em contents filhos
@@ -374,6 +373,26 @@ $.pull_values = (html) ->
                 
                 # defino contador em child
                 temp['count'][temp['position']]['child'] = 0
+
+
+                # aplica função caso tenha aplicações na raiz
+                if pull[temp['position']].gallery.this.data('template-gallery') is "all"
+
+                    # console.log temp['return'][temp['position']]
+                    pull[temp['position']].gallery.this.values = pull[temp['position']].gallery.this.data('template-value')
+
+                    $.parser_values_request pull[temp['position']].gallery.this, pull[temp['position']].gallery.this.values, temp['return'][temp['count'][temp['position']]['gallery']]
+
+                    # valida se foi recebido algo do php, para processar os valores
+                    # if temp['return']
+                    #     #repasso apra a função processar e aplicar os valores
+                    #     $.parser_values_request pull[temp['position']].gallery.this, pull[temp['position']].gallery.this.values, temp['return']['0']
+
+                    # $.parser_values_request 
+                    # pull[temp['position']].gallery.this, 
+                    # pull[temp['position']].gallery.this.contents, 
+                    # # temp['return'][temp['count'][temp['position']]['gallery']]
+
 
                 # loop para definir padores de cada filho
                 while temp['count'][temp['position']]['child'] < pull[temp['position']].gallery.childs.count
