@@ -340,33 +340,60 @@
 
             <!-- Palestrante -->
             <section class="container segmento" id="palestrantes" data-url-position="palestrantes">
-                
+
                 <!-- Palestrantes Internacionais -->
-                <article class="segmento-item">
+                <article class="segmento-item" data-template='gallery' data-pull-table='congresso' data-pull-select='{"segmento":"palestrantes", "grupo":"internacional"}'>
 
                     <!-- Marcador de 'Palestrante internacional' -->
                     <h1 class="segmento-item-marcador">Palestrante internacional</h1>
 
                     <!-- Informações do palestrante -->
-                    <div class="palestrante-item media">
+                    <div class="palestrante-item media" data-template-gallery='child'>
 
                         <!-- Foto do palestrante -->
-                        <a class="pull-left palestrante-item-foto" href="#">
-                            <img class="media-object" src="assets/contents/palestrantes/benedict-wilmes.jpg" alt="Benedict Wilmes">
-                        </a>
+                        <div class="pull-left palestrante-item-foto">
+                            <img class="media-object" src="http://placehold.it/800x1000" alt="#" data-template-value='{"palestrante":{"nome":"title", "foto":"src"} }'>
+                        </div>
 
                         <!-- Nome, curriculum e temas -->
                         <div class="media-body">
                             <!-- Nome do palestrante -->
-                            <h1 class="palestrante-item-nome">Benedict Wilmes</h1>
+                            <h1 class="palestrante-item-nome" data-template-value='{"palestrante":{"nome":"text"}}'></h1>
 
-                            <div class="palestrante-item-info">
-                                <p>Department of Orthodontics</p>
-                                <p>University of Duesseldorf Alemanha</p>
-                            </div>
+                            <div class="palestrante-item-info" data-template-value='{"palestrante":{"curriculum":"text"}}'></div>
 
                             <div class="palestrante-item-tema">
-                                <p>Short description, Nat. Am ea nit et idisi to ommolori ut est quam illende cus de cor si beroviducim lab idus renimi, aut .....</p>
+                                <p data-template-value='{"tema":{"titulo":"text"}}'>Short description, Nat. Am ea nit et idisi to ommolori ut est quam illende cus de cor si beroviducim lab idus renimi, aut .....</p>
+                                <p data-template-value='{"tema":{"sobre":"text"}}'>Short description, Nat. Am ea nit et idisi to ommolori ut est quam illende cus de cor si beroviducim lab idus renimi, aut .....</p>
+                            </div>                            
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Palestrantes nacionais -->
+                <article class="segmento-item" data-template='gallery' data-pull-table='congresso' data-pull-select='{"segmento":"palestrantes", "grupo":"nacional"}'>
+
+                    <!-- Marcador de 'Palestrante internacional' -->
+                    <h1 class="segmento-item-marcador">Palestrantes nacionais</h1>
+
+                    <!-- Informações do palestrante -->
+                    <div class="palestrante-item media" data-template-gallery='child'>
+
+                        <!-- Foto do palestrante -->
+                        <div class="pull-left palestrante-item-foto">
+                            <img class="media-object" src="http://placehold.it/800x1000" alt="#" data-template-value='{"palestrante":{"nome":"title", "foto":"src"} }'>
+                        </div>
+
+                        <!-- Nome, curriculum e temas -->
+                        <div class="media-body">
+                            <!-- Nome do palestrante -->
+                            <h1 class="palestrante-item-nome" data-template-value='{"palestrante":{"nome":"text"}}'></h1>
+
+                            <div class="palestrante-item-info" data-template-value='{"palestrante":{"curriculum":"text"}}'></div>
+
+                            <div class="palestrante-item-tema">
+                                <p data-template-value='{"tema":{"titulo":"text"}}'>Short description, Nat. Am ea nit et idisi to ommolori ut est quam illende cus de cor si beroviducim lab idus renimi, aut .....</p>
+                                <p data-template-value='{"tema":{"sobre":"text"}}'>Short description, Nat. Am ea nit et idisi to ommolori ut est quam illende cus de cor si beroviducim lab idus renimi, aut .....</p>
                             </div>                            
                         </div>
                     </div>
