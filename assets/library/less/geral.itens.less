@@ -1,4 +1,4 @@
-// CONFIGURA ELEMENTOS FREQUENTES //
+// CONFIGURA ELEMENTOS FREQUENTES E BASICOS //
 // Configura tabela de inscrição
 .table-inscricao {
     // Configurações globais para itens
@@ -24,7 +24,6 @@
         // Caso esteja desabilitada
         &.disabled{ opacity: 0.3; background-color: #f5f5f5; }
     }
-
 }
 
 // Configura galeria de imagens
@@ -136,3 +135,28 @@
     }
     .glyphicon{display: none;}
 }
+
+// Configuração para pagina
+.page {  min-height: 100% }
+
+// Configura os conteudos
+#contents {
+    position: relative;
+    top: 100%;
+    margin-top: 230px;
+
+    // Configura segmento
+    .segmento {
+        min-height: 100%;
+        padding-bottom: 10%;
+        margin-bottom: 2%;
+        margin-top: 10%;
+        border-bottom: 1px dashed rgb(240, 240, 240);
+
+        .segmento-item {
+            display: block;
+            margin: 10% 0;
+        }
+    }
+}
+

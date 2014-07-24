@@ -1,0 +1,34 @@
+// CONFIGURA CONTATO
+
+// Inicia contato
+#contato {
+
+    // Formulário de contato
+    .form-horizontal {
+
+        // Contents dos campos
+        .form-group {
+            margin-bottom: 25px;
+
+            // Configura campos do formulário
+            .form-control {
+                font-size: 20px;
+                height: initial;
+                color: #86754C;
+                line-height: 50px;
+
+                // Configura Placehoder
+                &::-webkit-input-placeholder {font-size: 26px; font-weight:500; color: rgba(134, 117, 76, 0.59); }
+                &:-moz-placeholder {font-size: 26px; font-weight:500; color: rgba(134, 117, 76, 0.59); } // Firefox 18
+                &::-moz-placeholder {font-size: 26px; font-weight:500; color: rgba(134, 117, 76, 0.59); } // Firefox 19+
+                &:-ms-input-placeholder {font-size: 26px; font-weight:500; color: rgba(134, 117, 76, 0.59); }
+
+                // Configura box de mensagens
+                &#Msg { min-height: 300px;}
+            }
+
+            // Confiugra botão de envio
+            #send { font-size: 25px; }
+        }
+    }
+}

@@ -1,0 +1,73 @@
+// CONFIGURA PROGRAMACAO
+
+// Inicia programacao
+#programacao {
+
+    // Configura cronograma group
+    .cronograma-group {
+
+        // quando tabela
+        .cronograma-table {
+            margin: 3% 0;
+
+            // Itens
+            .cronograma-table-item{
+
+                // remove borda do primeiro item
+                &:first-child {
+                    td { border: 0; }
+                }
+
+                // Todos os elementos são vreticalmente centralizados
+                * {vertical-align: middle;}
+
+                // Confiura horario
+                .cronograma-group-time {
+                    width: 15%;
+                    text-align: center;
+
+                    // Bloco de tempo
+                    .cronograma-tema-time-item {
+                        display: inline-block;
+                        font-weight: 100;
+                        font-size: 14px;
+                        color: white;
+                        background-color: rgb(5, 30, 65);
+                        border-radius: 0;
+                        margin: 5px;
+                    }
+                }
+
+                // Configura Imagem
+                .cronograma-table-foto {
+                    width: 100px;
+                    text-align: right;
+
+                    // imagem
+                    img{ width: 80px;}
+                }
+
+                // Configura Nome do palestrante
+                .cronograma-table-palestrante {
+                    width: 25%;
+                    text-align: left;
+
+                    h1{
+                        font-size: 22px;
+                        line-height: 28px;
+                        margin: 0px;
+                        font-weight: 300;
+                    }                    
+                }
+
+                // Configura tema do palestrante
+                .cronograma-table-tema {
+                    text-align: left;
+
+                    p{ font-size: 18px; line-height: 22px; margin: 0px; }
+                }
+
+            }
+        }
+    }
+}
