@@ -51,7 +51,8 @@ body {overflow-x: hidden;}
     // Configura barra do topo 
     .topo {
         padding: 0px;
-        width: 1200px;
+        width: 100%;
+        max-width: 1200px;
         height: 85px;
         margin: 0 auto;
 
@@ -72,7 +73,8 @@ body {overflow-x: hidden;}
 
         // configura menu group
         .menu-group {
-            width: 1200px;
+            width: 100%;
+            max-width: 1200px;
             margin: 0 auto;
 
             // configura botão
@@ -125,6 +127,91 @@ body {overflow-x: hidden;}
                     }
                 }
             }
+
+
+            // Configura menu completo
+            &.app-actived {
+                text-align: center;
+                display: inline-block;
+                position: fixed;
+                top: 0;
+                min-width: 100%;
+                max-width: 100%;
+                height: 100%;
+                margin: 0 auto;
+                background-color: rgba(0, 0, 0, 0.85);
+                overflow-y: scroll;
+                min-width: 350px;
+
+                //  Configura botão
+                .btn-menu{
+                    position: absolute;
+                    top: 10%;
+                    left: 10%;
+                    width: 55px;
+                    padding: 7px;
+                    float: left;
+                    margin-right: 36px;
+
+                    .icon-bar{ display: none; } //Esconde todas as barras
+                    &:after{
+                        content: "x";
+                        color: #FFF;
+                        font-size: 50px;
+                        font-family: verdana;
+                        line-height: 12px;
+                    }
+                }
+
+                // Configura contents do menu
+                .menu-group-nav {
+                    margin: 0 auto;
+                    display: block;
+                    width: 50%;
+                    min-width: 350px;
+                    float: none;
+                    margin-top: 5%;
+                    margin-bottom: 5%;
+                    background-color: black;
+
+                    // Configura lista de segmentos do menu
+                    .menu-group-nav-list {
+                        float:none;
+                        margin: 10px auto;
+                        width:90%;
+                        margin-bottom: 25px;
+
+                        // connfigura itens do menu
+                        .menu-group-nav-item {
+                            font-size: 20px;
+                            font-weight: 300;
+                            letter-spacing: 1px;
+
+                            // quando o mouse em cima
+                            &:hover{background-color: initial;}
+
+                            // Configura sub itens
+                            &.menu-group-nav-item-sub {
+                                display: block;
+                                font-size: 15px;
+                                font-weight: 100;
+                                letter-spacing: 0px;
+                                text-transform: lowercase;
+                                margin-bottom: 5px;
+                                line-height: 10px;
+
+                                // Quando o mouse encima
+                                &:hover { background-color: rgba(255, 255, 255, 0.18); }
+
+                                //  remove borda dos elementos das pontas
+                                &:first-child{border-bottom: 0px;}
+                                &:last-child{border-bottom: 0px;}
+                            }
+                        }
+                    }
+                }
+            }
+
         }
     }
 }
