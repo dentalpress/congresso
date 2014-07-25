@@ -31,12 +31,15 @@
     .clearboth();
     margin-bottom: 50px;
 
+
+
     // Itens da galeria como fotos e botoes
     .figure-group-item {
         padding: 0px;
         overflow: hidden;
         text-decoration: none;
         color: inherit;
+
 
         // Imagem do item
         img {
@@ -77,6 +80,29 @@
         &:hover{ opacity: 1; }
     }
 
+    // Configura quando exibir opções curtas //
+    &.figure-group-short {
+
+        // Configura as thumbnail das fotos
+        .figure-group-item {
+            display: none;
+
+            // remove a ultima margin
+            &:last-child {margin-right:0;}
+
+            // Exibe os três primeiros
+            &:nth-child(1){ display:inline-block;}
+            &:nth-child(2){ display:inline-block;}
+            &:nth-child(3){ display:inline-block;}
+        }
+
+        // Configura tamanhos //
+        // Quando MD: >= 992px
+        &.col-md-1 {
+            width: 30%;
+            height: 220px;
+        }
+    }
 
 
     // Configura tamanhos //
@@ -88,9 +114,6 @@
             width: 28%;
             height: 210px;
             margin: 10px;
-
-            // remove a primeira margin
-            &:first-child {margin-left:0;}
 
             // remove a ultima margin
             &:last-child {margin-right:0;}
