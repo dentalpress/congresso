@@ -88,11 +88,7 @@ figure.buttom.click ->
     # define a posição no topo de destino
     figure.scroll.posicao = $(figure.content).offset().top 
 
-    console.log figure.scroll.posicao
-
     # movimenta pagina no scroll com a posição passada
     $("html:not(:animated),body:not(:animated)").animate
         scrollTop: figure.scroll.posicao - 200
         , 1000
-
-
