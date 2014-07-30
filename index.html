@@ -34,12 +34,12 @@
         <!-- VENDOR css: Google Fonts - Roboto -->
         <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic'>
 
-        <!-- LIBRARY less: Estilo geral  -->
+        <!-- LIBRARY less: Estilo geral  // desabilitado
         <link rel="stylesheet/less" type="text/css" href="assets/library/less/geral.style.less" />
-
-        <!-- LIBRARY css: Estilo geral para cursos 
-        <link rel="stylesheet" type="text/css" href="assets/library/css/geral.style.css" />
         -->
+
+        <!-- LIBRARY css: Estilo geral para cursos -->
+        <link rel="stylesheet" type="text/css" href="assets/library/css/geral.style.css" />
 
     </head>
 
@@ -1324,11 +1324,8 @@
         <!-- VENDOR js: Coffee-Script - jquery -->
         <script type="text/javascript" src="assets/vendor/coffee-script/coffee-script.min.js"></script>
 
-        <!-- VENDOR js: Less - jquery -->
+        <!-- VENDOR js: Less - jquery // desabilitado
         <script type="text/javascript" src="assets/vendor/less/less.min.js"></script>
-
-        <!-- LIBRARY coffe: Coffee for Menu Mobile 
-        <script type="text/coffeescript" src="assets/library/coffe/menu.app.coffe"></script>
         -->
 
         <!-- LIBRARY coffe: Coffee for URL Get RashTag -->
@@ -1341,12 +1338,11 @@
         <!-- LIBRARY coffe: Coffee for geral call -->
         <script type="text/coffeescript" src="assets/library/coffee/geral.app.coffee"></script>
 
-        <!-- VENDOR: htmlGetSQL -->
-        <script type="text/coffeescript" src="assets/vendor/htmlGetSQL/coffee/pull.coffee"></script>
+        <!-- VENDOR: htmlGetSQL - import library -->
+        <script type="text/javascript" src="assets/vendor/htmlGetSQL/js/pull.js"></script>
 
-        <script type="text/coffeescript">
-            $.pull_values $(document)
-        </script>
+        <!-- VENDOR: htmlGetSQL - play aplication -->
+        <script type="text/javascript"> $.pull_values($(document)); </script>
 
     </body>
 </html>
