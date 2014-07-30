@@ -1,0 +1,138 @@
+// CONFIGURA PROGRAMACAO
+
+// Inicia programacao
+#programacao {
+
+    // Configura cronograma group
+    .cronograma-group {
+
+        // quando tabela
+        .cronograma-table {
+            margin: 3% 0;
+
+            // Itens
+            .cronograma-table-item{
+
+                // remove borda do primeiro item
+                &:first-child {
+                    td { }
+                }
+
+                // Todos os elementos são vreticalmente centralizados
+                * {vertical-align: middle;}
+
+                // Confiura horario
+                .cronograma-group-time {
+                    width: 15%;
+                    text-align: center;
+
+                    // Bloco de tempo
+                    .cronograma-tema-time-item {
+                        display: inline-block;
+                        font-size: 14px;
+                        margin: 5px;
+                    }
+                }
+
+                // Configura Imagem
+                .cronograma-table-foto {
+                    width: 100px;
+                    text-align: right;
+
+                    // imagem
+                    img{ width: 80px;}
+                }
+
+                // Configura Nome do palestrante
+                .cronograma-table-palestrante {
+                    width: 25%;
+                    text-align: left;
+
+                    h1{
+                        font-size: 22px;
+                        line-height: 28px;
+                        margin: 0px;
+                    }                    
+                }
+
+                // Configura tema do palestrante
+                .cronograma-table-tema {
+                    text-align: left;
+
+                    p{ font-size: 18px; line-height: 22px; margin: 0px; }
+                }
+
+
+
+                // Configura quando intervalo
+                &.intervalo {
+
+                    // oculta imagem
+                    .cronograma-table-foto {img {display: none;}}
+
+                    // Configura Nome do palestrante
+                    .cronograma-table-palestrante {
+
+                        h1{
+                            font-size: 18px;
+                            line-height: 20px;
+                            margin: 0px;
+                        }                    
+                    }
+                }
+
+                // Configura quando intervalo
+                &.almoco {
+
+                    // oculta imagem
+                    .cronograma-table-foto {img {display: none;}}
+
+                    // Configura Nome do palestrante
+                    .cronograma-table-palestrante {
+
+                        h1{
+                            font-size: 18px;
+                            line-height: 20px;
+                            margin: 0px;
+                        }                    
+                    }
+                }
+
+                &.abertura{
+
+                    // oculta imagem
+                    .cronograma-table-foto {img {display: none;}}
+
+                    // Configura Nome do palestrante
+                    .cronograma-table-palestrante {
+
+                        h1{
+                            font-size: 18px;
+                            line-height: 20px;
+                            margin: 0px;
+                        }                    
+                    }
+                }
+
+                &.encerramento{
+
+                    // oculta imagem
+                    .cronograma-table-foto {img {display: none;}}
+
+                    // Configura Nome do palestrante
+                    .cronograma-table-palestrante {
+
+                        h1{
+                            font-size: 18px;
+                            line-height: 20px;
+                            margin: 0px;
+                        }                    
+                    }
+                }
+            }
+        }
+
+        // quando mobile
+        .cronograma-mobile { display: none; }
+    }
+}

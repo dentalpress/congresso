@@ -8,7 +8,6 @@
 
         // quando tabela
         .cronograma-table {
-            margin: 3% 0;
 
             // Itens
             .cronograma-table-item{
@@ -23,39 +22,31 @@
 
                 // Confiura horario
                 .cronograma-group-time {
-                    width: 15%;
                     text-align: center;
 
                     // Bloco de tempo
                     .cronograma-tema-time-item {
                         display: inline-block;
                         font-weight: 100;
-                        font-size: 14px;
                         color: white;
                         background-color: rgb(5, 30, 65);
                         border-radius: 0;
-                        margin: 5px;
                     }
                 }
 
                 // Configura Imagem
                 .cronograma-table-foto {
-                    width: 100px;
                     text-align: right;
 
                     // imagem
-                    img{ width: 80px;}
+                    img{ }
                 }
 
                 // Configura Nome do palestrante
                 .cronograma-table-palestrante {
-                    width: 25%;
                     text-align: left;
 
                     h1{
-                        font-size: 22px;
-                        line-height: 28px;
-                        margin: 0px;
                         font-weight: 300;
                     }                    
                 }
@@ -64,7 +55,7 @@
                 .cronograma-table-tema {
                     text-align: left;
 
-                    p{ font-size: 18px; line-height: 22px; margin: 0px; }
+                    p{ }
                 }
 
 
@@ -74,16 +65,13 @@
                     background-color: rgba(0, 0, 0, 0.10);
 
                     // oculta imagem
-                    .cronograma-table-foto {img {display: none;}}
+                    .cronograma-table-foto {img { }}
 
                     // Configura Nome do palestrante
                     .cronograma-table-palestrante {
 
                         h1{
                             color: rgba(58, 58, 58, 1);
-                            font-size: 18px;
-                            line-height: 20px;
-                            margin: 0px;
                             font-weight: 300;
                         }                    
                     }
@@ -94,16 +82,13 @@
                    background-color: rgba(0, 0, 0, 0.10);
 
                     // oculta imagem
-                    .cronograma-table-foto {img {display: none;}}
+                    .cronograma-table-foto {img { }}
 
                     // Configura Nome do palestrante
                     .cronograma-table-palestrante {
 
                         h1{
                             color: rgba(58, 58, 58, 1);
-                            font-size: 18px;
-                            line-height: 20px;
-                            margin: 0px;
                             font-weight: 300;
                         }                    
                     }
@@ -113,16 +98,13 @@
                    background-color: rgba(0, 0, 0, 0.10);
 
                     // oculta imagem
-                    .cronograma-table-foto {img {display: none;}}
+                    .cronograma-table-foto {img { }}
 
                     // Configura Nome do palestrante
                     .cronograma-table-palestrante {
 
                         h1{
                             color: rgba(58, 58, 58, 1);
-                            font-size: 18px;
-                            line-height: 20px;
-                            margin: 0px;
                             font-weight: 300;
                         }                    
                     }
@@ -132,17 +114,72 @@
                    background-color: rgba(0, 0, 0, 0.10);
 
                     // oculta imagem
-                    .cronograma-table-foto {img {display: none;}}
+                    .cronograma-table-foto {img { }}
 
                     // Configura Nome do palestrante
                     .cronograma-table-palestrante {
 
                         h1{
                             color: rgba(58, 58, 58, 1);
+                            font-weight: 300;
+                        }                    
+                    }
+                }
+            }
+        }
+
+        // quando mobile
+        .cronograma-mobile {
+            margin: 3% 0;
+
+            // Itens
+            .cronograma-mobile-item{
+                padding: 30px 0px;
+
+                // remove borda do primeiro item
+                &:first-child { padding-top: 0px; }
+                &:last-child { padding-bottom: 0px; }
+
+                // Confiura horario
+                .cronograma-group-time {
+                    text-align: center;
+
+                    // Bloco de tempo
+                    .cronograma-tema-time-item {
+                        display: inline-block;
+                        font-weight: 100;
+                        color: white;
+                        background-color: rgb(52, 78, 116);
+                        border-radius: 0;
+                    }
+                }
+
+
+                // Configura Nome do palestrante
+                .cronograma-mobile-palestrante {
+
+                    h1{ font-weight: 300; }
+                }
+
+                // Configura tema do palestrante
+                .cronograma-mobile-tema { p{ color:#464646; } }
+
+
+                // Congigura quando não for palestra
+                &.abertura, &.encerramento, &.almoco, &.intervalo {
+                    background-color: rgb(241, 241, 241);
+                    padding: 5px 0px;
+
+                    // oculta imagem
+                    .cronograma-mobile-foto {img {display: none;}}
+
+                    // Configura Nome do palestrante
+                    .cronograma-mobile-palestrante {
+
+                        h1{
                             font-size: 18px;
                             line-height: 20px;
                             margin: 0px;
-                            font-weight: 300;
                         }                    
                     }
                 }

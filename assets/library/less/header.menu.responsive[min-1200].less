@@ -1,0 +1,157 @@
+// CONFIGURA LARGURA DO MENU
+
+// Inicia Menu
+#menu {
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    z-index: -1;
+
+    // Configura barra do topo 
+    .topo {
+        padding: 0px;
+        width: 1150px;
+        height: 85px;
+        margin: 0 auto;
+
+        // configura logo do topo
+        .logo-congresso {
+            display: inline-block;
+            margin-top: 16px;
+
+            // figura
+            img{ height: 51px }
+        }
+    }
+
+    // Configuração do menu
+    .menu {
+        height: 34px;
+
+        // configura menu group
+        .menu-group {
+            width: 1150px;
+            margin: 0 auto;
+
+            // configura botão
+            .btn-menu{
+                width: 55px;
+                padding: 9px 7px;
+                float: left;
+                margin-right: 85px;
+
+                .icon-bar { }
+            }
+
+
+            // configura barra do menu
+            .menu-group-nav {
+                float: left;
+
+                // Lista de itens do menu
+                .menu-group-nav-list {
+                    margin: 0;
+                    padding: 0;
+
+                    //  Quando ativo
+                    &.actived { }
+
+                    // Configura links individuais
+                    .menu-group-nav-item {
+                        font-size: 17px;
+                        padding: 5px 20px;
+
+                        // Quando o mouse encima
+                        &:hover { }
+
+                        // Sub itens
+                        &.menu-group-nav-item-sub {
+                            display: none;
+                        }
+                    }
+
+                    // Configura inscricao
+                    &.inscricao {
+
+                        // Configura quando o mouse
+                        .menu-group-nav-item:hover { }
+                    }
+                }
+            }
+
+
+            // Configura menu completo
+            &.app-actived {
+                display: inline-block;
+                position: fixed;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                margin: 0 auto;
+                min-width: 350px;
+
+                //  Configura botão
+                .btn-menu{
+                    position: absolute;
+                    top: 10%;
+                    left: 10%;
+                    width: 55px;
+                    padding: 7px;
+                    float: left;
+                    margin-right: 36px;
+
+                    .icon-bar{ display: none; } //Esconde todas as barras
+                    &:after{
+                        content: "x";
+                        font-size: 50px;
+                        font-family: verdana;
+                        line-height: 12px;
+                    }
+                }
+
+                // Configura contents do menu
+                .menu-group-nav {
+                    margin: 0 auto;
+                    display: block;
+                    width: 50%;
+                    min-width: 350px;
+                    float: none;
+                    margin-top: 5%;
+                    margin-bottom: 5%;
+
+                    // Configura lista de segmentos do menu
+                    .menu-group-nav-list {
+                        float:none;
+                        margin: 10px auto;
+                        width:90%;
+                        margin-bottom: 25px;
+
+                        // connfigura itens do menu
+                        .menu-group-nav-item {
+                            font-size: 20px;
+
+                            // quando o mouse em cima
+                            &:hover{ }
+
+                            // Configura sub itens
+                            &.menu-group-nav-item-sub {
+                                display: block;
+                                font-size: 15px;
+                                margin-bottom: 5px;
+                                line-height: 10px;
+
+                                // Quando o mouse encima
+                                &:hover {  }
+
+                                //  remove borda dos elementos das pontas
+                                &:first-child{}
+                                &:last-child{}
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}

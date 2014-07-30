@@ -1,28 +1,160 @@
 // CONFIGURA ELEMENTOS FREQUENTES E BASICOS //
 // Configura tabela de inscrição
-.table-inscricao {
-    // Configurações globais para itens
-    * { td {vertical-align: middle;}}
+.box-inscricao{
 
-    // Configura tamanho no header
-    thead {
-        td {
-            h6 {font-size: 1.2em}
+    // Configura tabela
+    &.table {
+        // Configurações globais para itens
+        * { td {vertical-align: middle;}}
+
+        // Configura tamanho no header
+        thead {
+            td {
+                h6 {}
+            }
+        }
+
+        // Configura as linhas
+        tr {
+
+            // Configura os campos separados
+            td{
+                &.table-inscritos-indicador {text-align: right; }
+                &.table-inscritos-preco {text-align: center;}
+                &.table-inscritos-carrinho {text-align: left; vertical-align: middle}
+            }
+
+            // Caso esteja desabilitada
+            &.disabled{ opacity: 0.3; background-color: #f5f5f5; }
         }
     }
 
-    // Configura as linhas
-    tr {
+    // Configura lista
+    &.list-group {
+        margin-bottom: 20%;
 
-        // Configura os campos separados
-        td{
-            &.table-inscritos-indicador {text-align: right; }
-            &.table-inscritos-preco {text-align: center;}
-            &.table-inscritos-carrinho {text-align: left; vertical-align: middle}
+        // configura lista
+        .list-group-item {
+
+            // configura itens da lista
+            &.list-inscritos-indicador { }
+            &.list-inscritos-preco { }
+            &.list-inscritos-carrinho { }
+
+            // Caso esteja desabilitada
+            &.disabled{ opacity: 0.3; background-color: #f5f5f5; }
+        }
+    }
+
+    // < 512px w
+    @media screen and (max-width: 512px) {
+        // oculta a tabela
+        &.table {display: none;}
+    }
+
+    // >= 512px w
+    @media screen and (min-width: 512px) and (max-width: 640px) {
+        // oculta a tabela
+        &.table {display: none;}
+    }
+
+    // >= 640px w
+    @media screen and (min-width: 640px) and (max-width: 768px) {
+        // oculta a tabela
+        &.table{display: none;}
+    }
+
+    // >= 768px w
+    @media screen and (min-width: 768px) and (max-width: 992px){
+        // configura a tabela
+        &.table{
+
+            // Configura tamanho no header
+            thead {
+                td {
+                    h6 {font-size: 18px}
+                }
+            }
+
+            // Configura as linhas
+            tbody {
+                tr {
+
+                    // Configura os campos separados
+                    td{
+                        &.table-inscritos-indicador { 
+                            h6{ font-size: 16px } 
+                        }
+
+                        &.table-inscritos-preco { 
+                            h6{ font-size: 18px } 
+                        }
+
+                        &.table-inscritos-carrinho { 
+                            h6{ font-size: 18px } 
+                        }
+                    }
+                }
+            }
         }
 
-        // Caso esteja desabilitada
-        &.disabled{ opacity: 0.3; background-color: #f5f5f5; }
+        // Configura lista
+        &.list-group { display: none; }
+    }
+
+    // >= 992px w
+    @media screen and (min-width: 992px){
+        // configura a tabela
+        &.table{
+
+            // Configura tamanho no header
+            thead {
+                td {
+                    h6 {font-size: 17px}
+                }
+            }
+        }
+
+        // Configura lista
+        &.list-group { display: none; }
+    }
+
+    // >= 1200px w
+    @media screen and (min-width: 1200px) {
+        // configura a tabela
+        &.table{
+
+            // Configura tamanho no header
+            thead {
+                td {
+                    h6 {font-size: 20px}
+                }
+            }
+
+            // Configura as linhas
+            tbody {
+                tr {
+
+                    // Configura os campos separados
+                    td{
+                        &.table-inscritos-indicador { 
+                            h6{ font-size: 24px } 
+                        }
+
+                        &.table-inscritos-preco { 
+                            h6{ font-size: 28px } 
+                        }
+
+                        &.table-inscritos-carrinho { 
+                            h6{ font-size: 28px } 
+                        }
+                    }
+                }
+            }
+        }
+
+        // Configura lista
+        &.list-group { display: none; }
     }
 }
 
@@ -39,6 +171,7 @@
         overflow: hidden;
         text-decoration: none;
         color: inherit;
+        display: inline-block;
 
 
         // Imagem do item
@@ -82,40 +215,16 @@
         &:hover{ opacity: 1; }
     }
 
-    // Configura quando exibir opções curtas //
-    &.figure-group-short {
 
-        // Configura as thumbnail das fotos
+
+    // < 512px w
+    @media screen and (max-width: 512px) {
+
+        // Configura os tamanhos dos itens
         .figure-group-item {
-            display: none;
-
-            // remove a ultima margin
-            &:last-child {margin-right:0;}
-
-            // Exibe os três primeiros
-            &:nth-child(2){ display:inline-block;}
-            &:nth-child(3){ display:inline-block;}
-            &:nth-child(4){ display:inline-block;}
-        }
-
-        // Configura tamanhos //
-        // Quando MD: >= 992px
-        &.col-md-1 {
-            width: 30%;
-            height: 220px;
-        }
-    }
-
-
-    // Configura tamanhos //
-    // Configura os tamanhos dos itens
-    .figure-group-item {
-        
-        // Quando MD: >= 992px
-        &.col-md-4{
-            width: 28%;
-            height: 210px;
-            margin: 10px;
+            width: 46%;
+            height: 136px;
+            margin: 4px;
 
             // remove a ultima margin
             &:last-child {margin-right:0;}
@@ -123,20 +232,284 @@
             // Configura tamanho do icone
             .figure-group-item-btn{ font-size: 53px; }
         }
+
+        // Configura tamanho de "exibir mais"
+        .figure-group-item-mais {
+            font-size: 18px;
+            font-weight: 300;
+            float: right;
+            width: 100%;
+            margin: 2px 0;
+            padding: 7px;
+            line-height: 19px;
+            position: fixed;
+            bottom: 5%;
+        }
+
+        // Configura quando exibir opções curtas //
+        &.figure-group-short {
+
+            // Configura as thumbnail das fotos
+            .figure-group-item {
+                display: none;
+                width: 97%;
+                height: 205px;
+                margin: 4px;
+
+                // remove a ultima margin
+                &:last-child {margin-right:0;}
+
+                // Exibe os três primeiros
+                &:nth-child(2){ display:inline-block;}
+            }
+
+            // Configura tamanho de "exibir mais"
+            .figure-group-item-mais {
+                width: 100%;
+                position: initial;
+            }
+        }
     }
 
-    // Configura tamanho de "exibir mais"
-    .figure-group-item-mais {
+    // >= 512px w
+    @media screen and (min-width: 512px) and (max-width: 640px) {
 
-        // Quando MD: >= 992px
-        &.col-md-1 {
-            font-size: 15px;
+        // Configura os tamanhos dos itens
+        .figure-group-item {
+            width: 47%;
+            margin: 5px;
+            height: 187px;
+
+            // remove a ultima margin
+            &:last-child {margin-right:0;}
+
+            // Configura tamanho do icone
+            .figure-group-item-btn{ font-size: 53px; }
+        }
+
+        // Configura tamanho de "exibir mais"
+        .figure-group-item-mais {
+            font-size: 22px;
+            font-weight: 300;
+            float: right;
+            width: 90%;
+            margin: 2px 0;
+            padding: 10px;
+            line-height: 19px;
+            position: fixed;
+            bottom: 5%;
+        }
+
+        // Configura quando exibir opções curtas //
+        &.figure-group-short {
+
+            // Configura as thumbnail das fotos
+            .figure-group-item {
+                display: none;
+                width: 100%;
+                margin: 4px auto;
+                height: 359px;
+
+                // remove a ultima margin
+                &:last-child {margin-right:0;}
+
+                // Exibe os três primeiros
+                &:nth-child(2){ display:inline-block;}
+            }
+
+            // Configura tamanho de "exibir mais"
+            .figure-group-item-mais {
+                width: 100%;
+                position: initial;
+            }
+        }
+    }
+
+    // >= 640px w
+    @media screen and (min-width: 640px) and (max-width: 768px) {
+
+        // Configura os tamanhos dos itens
+        .figure-group-item {
+            width: 42%;
+            height: 194px;
+            margin: 5px;
+
+            // remove a ultima margin
+            &:last-child {margin-right:0;}
+
+            // Configura tamanho do icone
+            .figure-group-item-btn{ font-size: 53px; }
+        }
+
+        // Configura tamanho de "exibir mais"
+        .figure-group-item-mais {
+            font-size: 12px;
             font-weight: 300;
             float: right;
             width: 10%;
-            height: 210px;
-            margin: 10px 0;
-            padding: 85px 0 0 0;
+            height: 197px;
+            margin: 2px 0;
+            padding: 77px 0 0 0;
+            line-height: 19px;
+        }
+
+        // Configura quando exibir opções curtas //
+        &.figure-group-short {
+
+            // Configura as thumbnail das fotos
+            .figure-group-item {
+                display: none;
+
+                // remove a ultima margin
+                &:last-child {margin-right:0;}
+
+                // Exibe os três primeiros
+                &:nth-child(2){ display:inline-block;}
+                &:nth-child(3){ display:inline-block;}
+            }
+        }
+    }
+
+    // >= 768px w
+    @media screen and (min-width: 768px) and (max-width: 992px){
+
+        // Configura os tamanhos dos itens
+        .figure-group-item {
+            width: 29%;
+            height: 161px;
+            margin: 2px;
+
+            // remove a ultima margin
+            &:last-child {margin-right:0;}
+
+            // Configura tamanho do icone
+            .figure-group-item-btn{ font-size: 53px; }
+        }
+
+        // Configura tamanho de "exibir mais"
+        .figure-group-item-mais {
+            font-size: 13px;
+            font-weight: 300;
+            float: right;
+            width: 10%;
+            height: 162px;
+            margin: 2px 0;
+            padding: 72px 0 0 0;
+            line-height: 19px;
+        }
+
+        // Configura quando exibir opções curtas //
+        &.figure-group-short {
+
+            // Configura as thumbnail das fotos
+            .figure-group-item {
+                display: none;
+
+                // remove a ultima margin
+                &:last-child {margin-right:0;}
+
+                // Exibe os três primeiros
+                &:nth-child(2){ display:inline-block;}
+                &:nth-child(3){ display:inline-block;}
+                &:nth-child(4){ display:inline-block;}
+            }
+        }
+    }
+
+    // >= 992px w
+    @media screen and (min-width: 992px){
+
+        // Configura os tamanhos dos itens
+        .figure-group-item {
+                width: 28%;
+                height: 208px;
+                margin: 5px;
+
+                // remove a ultima margin
+                &:last-child {margin-right:0;}
+
+                // Configura tamanho do icone
+                .figure-group-item-btn{ font-size: 53px; }
+        }
+
+        // Configura tamanho de "exibir mais"
+        .figure-group-item-mais {
+                font-size: 15px;
+                font-weight: 300;
+                float: right;
+                width: 10%;
+                height: 210px;
+                margin: 4px 0;
+                padding: 85px 0 0 0;
+        }
+
+        // Configura quando exibir opções curtas //
+        &.figure-group-short {
+
+            // Configura as thumbnail das fotos
+            .figure-group-item {
+                display: none;
+
+                // remove a ultima margin
+                &:last-child {margin-right:0;}
+
+                // Exibe os três primeiros
+                &:nth-child(2){ display:inline-block;}
+                &:nth-child(3){ display:inline-block;}
+                &:nth-child(4){ display:inline-block;}
+            }
+        }
+    }
+
+    // >= 1200px w
+    @media screen and (min-width: 1200px) {
+
+        // Configura os tamanhos dos itens
+        .figure-group-item {
+                width: 28%;
+                height: 210px;
+                margin: 10px;
+
+                // remove a ultima margin
+                &:last-child {margin-right:0;}
+
+                // Configura tamanho do icone
+                .figure-group-item-btn{ font-size: 53px; }
+        }
+
+        // Configura tamanho de "exibir mais"
+        .figure-group-item-mais {
+                font-size: 15px;
+                font-weight: 300;
+                float: right;
+                width: 10%;
+                height: 210px;
+                margin: 10px 0;
+                padding: 85px 0 0 0;
+        }
+
+        // Configura quando exibir opções curtas //
+        &.figure-group-short {
+
+            // Configura as thumbnail das fotos
+            .figure-group-item {
+                display: none;
+
+                // remove a ultima margin
+                &:last-child {margin-right:0;}
+
+                // Exibe os três primeiros
+                &:nth-child(2){ display:inline-block;}
+                &:nth-child(3){ display:inline-block;}
+                &:nth-child(4){ display:inline-block;}
+            }
+
+            // Configura tamanhos //
+            // Quando MD: >= 992px
+            &.col-md-1 {
+                width: 30%;
+                height: 220px;
+            }
         }
     }
 }
@@ -166,21 +539,12 @@
 
 // Configura os conteudos
 #contents {
-    position: relative;
-    top: 100%;
-    margin-top: 230px;
 
     // Configura segmento
     .segmento {
-        min-height: 100%;
-        padding-bottom: 10%;
-        margin-bottom: 2%;
-        margin-top: 10%;
         border-bottom: 1px dashed rgb(240, 240, 240);
 
         .segmento-item {
-            display: block;
-            margin: 10% 0;
         }
     }
 }

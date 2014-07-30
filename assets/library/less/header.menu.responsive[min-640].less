@@ -1,0 +1,132 @@
+// CONFIGURA LARGURA DO MENU
+
+// Inicia Menu
+#menu {
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    z-index: -1;
+
+    // Configura barra do topo 
+    .topo {
+        padding: 0px;
+        width: 37%;
+        margin: 0 auto;
+
+        // configura logo do topo
+        .logo-congresso {
+            display: inline-block;
+            margin: 16px;
+            width: 100%;
+
+            // figura
+            img{ width: 100%; }
+        }
+    }
+
+    // Configuração do menu
+    .menu {
+        position: absolute;
+        top: 5%;
+        width: 10%;
+        background-color: initial;
+        margin: 8px;
+        left: 8%;
+
+        // configura menu group
+        .menu-group {
+            width: 100%;
+            margin: 0 auto;
+
+            // configura botão
+            .btn-menu{
+                width: 100%;
+                padding: 7px;
+                float: left;
+
+                .icon-bar {
+                    border: 3px solid #FFF;
+                    margin: 9px 0;
+                }
+            }
+
+            // configura barra do menu
+            .menu-group-nav {display: none;}
+
+            // Configura menu completo
+            &.app-actived {
+                display: inline-block;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                margin: 0 auto;
+                min-width: 350px;
+                background-color: rgba(0, 0, 0, 1);
+
+                //  Configura botão
+                .btn-menu{
+                    position: absolute;
+                    top: 5%;
+                    left: 6%;
+                    width: 55px;
+                    padding: 7px;
+                    float: left;
+                    margin-right: 36px;
+
+                    .icon-bar{ display: none; } //Esconde todas as barras
+                    &:after{
+                        content: "x";
+                        font-size: 50px;
+                        font-family: verdana;
+                        line-height: 12px;
+                    }
+                }
+
+                // Configura contents do menu
+                .menu-group-nav {
+                    margin: 0 auto;
+                    display: block;
+                    width: 65%;
+                    min-width: 350px;
+                    float: none;
+                    margin-top: 5%;
+                    margin-bottom: 5%;
+
+                    // Configura lista de segmentos do menu
+                    .menu-group-nav-list {
+                        float:none;
+                        margin: 10px auto;
+                        width:90%;
+                        margin-bottom: 25px;
+
+                        // connfigura itens do menu
+                        .menu-group-nav-item {
+                            font-size: 20px;
+
+                            // quando o mouse em cima
+                            &:hover{ }
+
+                            // Configura sub itens
+                            &.menu-group-nav-item-sub {
+                                display: block;
+                                font-size: 15px;
+                                margin-bottom: 5px;
+                                line-height: 10px;
+
+                                // Quando o mouse encima
+                                &:hover {  }
+
+                                //  remove borda dos elementos das pontas
+                                &:first-child{}
+                                &:last-child{}
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}

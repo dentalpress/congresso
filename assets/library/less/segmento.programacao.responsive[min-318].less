@@ -1,0 +1,84 @@
+// CONFIGURA PROGRAMACAO
+
+// Inicia programacao
+#programacao {
+
+    // Configura cronograma group
+    .cronograma-group {
+
+        // quando tabela
+        .cronograma-table { display: none; }
+
+        // quando mobile
+        .cronograma-mobile {
+            margin: 3% 0;
+
+            // Itens
+            .cronograma-mobile-item{
+
+                // remove borda do primeiro item
+                &:first-child {
+                }
+
+
+                // Confiura horario
+                .cronograma-group-time {
+                    width: 100%;
+
+                    // Bloco de tempo
+                    .cronograma-tema-time-item {
+                        display: inline-block;
+                        font-size: 12px;
+                        margin: 5px;
+                    }
+                }
+
+
+                // Configura Nome do palestrante
+                .cronograma-mobile-palestrante {
+                    width: 100%;
+                    text-align: center;
+
+                    h1{
+                        font-size: 18px;
+                        line-height: 28px;
+                        margin: 0px;
+                    }
+                }
+
+                // Configura tema do palestrante
+                .cronograma-mobile-tema {
+                    text-align: center;
+
+                    p{ font-size: 19px; line-height: 22px; margin: 0px; }
+                }
+
+
+                // Congigura quando não for palestra
+                &.abertura, &.encerramento, &.almoco, &.intervalo {
+
+                    // oculta imagem
+                    .cronograma-mobile-foto {img {display: none;}}
+
+                    // Configura Nome do palestrante
+                    .cronograma-mobile-palestrante {
+
+                        h1{
+                            font-size: 18px;
+                            line-height: 20px;
+                            margin: 0px;
+                        }                    
+                    }
+                }
+            }
+        }
+    }
+
+    // configura segmento item
+    .segmento-item{
+        margin-bottom: 30%!important;
+
+        // configura marcador
+        .segmento-item-marcador { font-size: 30px; }        
+    }
+}
