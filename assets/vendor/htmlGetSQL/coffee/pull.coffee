@@ -58,6 +58,10 @@ $.parser_values_request = (me, data, val) -> #recebe função
                 value.me.attr("value":value.val) if !value.return
                 return value.me.attr("value") if value.return
 
+            when "disabled" # quando for u texto de input            
+                value.me.attr("disabled":value.val) if !value.return
+                return value.me.attr("disabled") if value.return
+
             when "class" # quando for uma classe
                 value.me.addClass(value.val) if !val.return
                 value.me.data("template-request-class", value.val) if value.return
