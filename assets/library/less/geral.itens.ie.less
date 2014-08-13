@@ -1,0 +1,235 @@
+// CONFIGURA ELEMENTOS FREQUENTES E BASICOS //
+// Configura tabela de inscrição
+.box-inscricao{
+
+    // Configura tabela
+    &.table {
+        // Configurações globais para itens
+        * { td {vertical-align: middle;}}
+
+        // Configura tamanho no header
+        thead {
+            td {
+                h6 {}
+            }
+        }
+
+        // Configura as linhas
+        tr {
+
+            // Configura os campos separados
+            td{
+                &.table-inscritos-indicador {text-align: right; }
+                &.table-inscritos-preco {text-align: center;}
+                &.table-inscritos-carrinho {text-align: left; vertical-align: middle}
+            }
+
+            // Caso esteja desabilitada
+            &.disabled{ opacity: 0.3; background-color: #f5f5f5; }
+        }
+    }
+
+    // Configura lista
+    &.list-group {
+        margin-bottom: 20%;
+
+        // configura lista
+        .list-group-item {
+
+            // configura itens da lista
+            &.list-inscritos-indicador { }
+            &.list-inscritos-preco { }
+            &.list-inscritos-carrinho { }
+
+            // Caso esteja desabilitada
+            &.disabled{ opacity: 0.3; background-color: #f5f5f5; }
+        }
+    }
+
+
+    // >= 1200px w
+
+        // configura a tabela
+        &.table{
+
+            // Configura tamanho no header
+            thead {
+                td {
+                    h6 {font-size: 20px}
+                }
+            }
+
+            // Configura as linhas
+            tbody {
+                tr {
+
+                    // Configura os campos separados
+                    td{
+                        &.table-inscritos-indicador { 
+                            h6{ font-size: 24px } 
+                        }
+
+                        &.table-inscritos-preco { 
+                            h6{ font-size: 28px } 
+                        }
+
+                        &.table-inscritos-carrinho { 
+                            h6{ font-size: 28px } 
+                        }
+                    }
+                }
+            }
+        }
+
+        // Configura lista
+        &.list-group { display: none; }
+
+}
+
+// Configura galeria de imagens
+.figure-group {
+    .clearboth();
+    margin-bottom: 50px;
+
+
+
+    // Itens da galeria como fotos e botoes
+    .figure-group-item {
+        padding: 0px;
+        overflow: hidden;
+        text-decoration: none;
+        color: inherit;
+        display: inline-block;
+
+
+        // Imagem do item
+        img {
+            min-width: 100%;
+            min-height: 100%;
+            max-width: 120%;
+            max-height: 120%;
+        }
+
+        // Botão
+        .figure-group-item-btn {            
+            font-weight: 200;
+            color: white;
+            display: inline-block;
+            position: absolute;
+            top: 37%;
+            right: 42%;
+            opacity: 0;
+        }
+
+        // Mouse em cima
+        &:hover{
+
+            // Configura quando o botão
+            .figure-group-item-btn{ opacity: 0.7; }
+        }
+    }
+
+    // Botão de exibir outros itens
+    .figure-group-item-mais {
+        font-size: 24px;
+        font-weight: 100;
+        text-align: center;
+        color: white;
+        background-color: rgb(171, 159, 131);
+        opacity: 0.7;
+        cursor: pointer;
+
+        // Quando o mouse encima
+        &:hover{ opacity: 1; }
+    }
+
+
+    // >= 1200px w
+
+
+        // Configura os tamanhos dos itens
+        .figure-group-item {
+                width: 28%;
+                height: 210px;
+                margin: 10px;
+                float: left;
+
+                // remove a ultima margin
+                &:last-child {margin-right:0;}
+
+                // Configura tamanho do icone
+                .figure-group-item-btn{ font-size: 53px; }
+        }
+
+        // Configura tamanho de "exibir mais"
+        .figure-group-item-mais {
+                font-size: 100px;
+                font-weight: 100;
+                float: right;
+                width: 10%;
+                height: 210px;
+                margin: 10px 0;
+                padding: 85px 0 0 0;
+        }
+
+        // Configura quando exibir opções curtas //
+        &.figure-group-short {
+
+            // Configura as thumbnail das fotos
+            .figure-group-item {
+                display: none;
+
+                // remove a ultima margin
+                &:last-child {margin-right:0;}
+
+                // Exibe os três primeiros
+                &:nth-child(1){ display:inline-block;}
+                &:nth-child(2){ display:inline-block;}
+                &:nth-child(3){ display:inline-block;}
+            }
+
+            // Configura tamanhos //
+            // Quando MD: >= 992px
+            &.col-md-1 {
+                width: 30%;
+                height: 220px;
+            }
+        }
+
+}
+
+// Configura botão mobile do menu
+.btn-menu {
+    padding: 10px;
+    display: inline-block;
+    background-color: initial;
+    cursor: pointer;
+    width: 34%;
+
+    // icone do botão
+    .icon-bar{
+        width: 100%;
+        margin: 5px 0;
+        border: 2px solid #FFF;
+        display: block;
+        &:first-child{margin-top: 0px}
+        &:nth-child(3){margin-bottom: 0px;}
+    }
+    .glyphicon{display: none;}
+}
+
+// Configuração para pagina
+.page {  min-height: 100% }
+
+// Configura os conteudos
+#contents {
+
+    // Configura segmento
+    .segmento {
+        border-bottom: 1px dashed rgb(240, 240, 240);
+
+        .segmento-item {
+        }
+    }
+}
+

@@ -1,0 +1,35 @@
+// FUNÇÕES E VARIAVES //
+// Reseta autura de um box que contem elementos flutuantes
+.clearboth {&:after { content: " "; display: block; height: 0; clear: both; font-size: 0; visibility: hidden; }}
+
+// Alinha box no centro
+.boxcenter(@a:50) { @px: (@a - (@a*2)) + 0px; @pc: @a + 0%; margin: 0 auto;  position: relative;  top: @pc;  margin-top: @px;  display: inherit; }
+
+// Configura documento para a altura em 100%
+html, body {height: 100%;}
+
+// Oculta scroll horizontal
+// body {overflow-x: hidden;}
+
+
+// IMPORTA "CONFIGURA TEXTOS" //
+@import "geral.text.less";
+
+// IMPORTA "ITENS FREQUENTES" //
+@import "geral.itens.less";
+
+// CONFIGURA PAGINAS //
+@import "header.menu.less";
+@import "segmento.abertura.less";
+@import "segmento.contato.less";
+@import "segmento.informacao.less";
+@import "segmento.palestrantes.less";
+@import "segmento.programacao.less";
+
+// CONFIGURA TAMANHOS DAS PAGINAS //
+@import "text.responsive[min-1200].less";
+@import "header.menu.responsive[min-1200].less";
+@import "segmento.responsive[min-1200].less";
+@import "segmento.abertura.responsive[min-1200].less";
+@import "segmento.programacao.responsive[min-1200].less";
+@import "segmento.palestrantes.responsive[min-1200].less";
