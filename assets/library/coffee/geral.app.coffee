@@ -56,16 +56,26 @@ figure.buttom.click ->
     # Configura elementos
 
     # localiza grupo das imagens, e adiciona em figure>contents caso ela não seja do tipo "short"
-    figure.content = figure.buttom.closest('.figure-group')
+    figure.content = $(this).closest('.figure-group')
+
+    # posiciona todos os botões como "+"
+    figure.buttom.text("+")
 
     # verifica se existe a classe no contents
     if $(figure.content).hasClass('figure-group-short')
+
+        # adiciono o texto "-" ao botão
+        $(this).text("-")
 
         # adiciona em figure>show figure>content
         figure.show = figure.content
 
     # caso não já esteja visivel
     else 
+
+        # adiciono o texto "-" ao botão
+        $(this).text("+")
+
         # cria span em figure
         figure.show = '<span></span>'
 
@@ -92,3 +102,6 @@ figure.buttom.click ->
     $("html:not(:animated),body:not(:animated)").animate
         scrollTop: figure.scroll.posicao - 200
         , 1000
+
+# TOOGLE SHOW THUMBNAIL FOTOS
+# # # # 
