@@ -39,8 +39,8 @@
         <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic'>
 
         <!-- LIBRARY less: Estilo geral  // desabilitado
-        <link rel="stylesheet/less" type="text/css" href="assets/library/less/geral.style.less" />
         <link rel="stylesheet/less" type="text/css" href="assets/library/less/geral.style.ie.less" />
+        <link rel="stylesheet/less" type="text/css" href="assets/library/less/geral.style.less" />
         -->
 
         <!-- LIBRARY css: Estilo geral -->
@@ -87,6 +87,7 @@
                         <img class="logo-img" src="assets/library/logo/congresso-dentalpress-landscape.svg" alt="8º Congresso Internacional Dental Press - logo landscape - horizontal">
                     </a>
 
+                    <!-- Logo das mídias sociais -->
                     <div class="social-media">
                         <a  rel="publisher"class="social-media-item" href="https://plus.google.com/118428402581445374783" target="_blanck">
                             <img src="assets/library/logo/social-media-white-circle-google-plus.svg">
@@ -648,7 +649,9 @@
                                 <fieldset>
 
                                     <!-- Nome do formulário -->
-                                    <input id="curso[nome]" name="curso[nome]" type="hidden" value="8º Congresso Dental Press">
+                                    <input id="origem" name="origem" type="hidden">
+
+                                    <input id="curso[nome]" name="curso[nome]" type="hidden" value="8º Congresso Internacional Dental Press">
 
                                     <!-- Nome -->
                                     <div class="form-group col-md-12">
@@ -1077,7 +1080,11 @@
                     <!-- Marcador -->
                     <h1 class="segmento-item-marcador">Congressos anteriores</h1>
 
-                    <h1>7º Congresso</h1>
+                    <h1>7º Congresso 
+
+                        <!-- Link na integra para o facebook -->
+                        <a target="_blanck" href="https://www.facebook.com/media/set/?set=a.739342236142903.1073741830.725422414201552&type=3" class="btn btn-default btn-xs">Clique aqui e confira o álbum na íntegra <span class="glyphicon glyphicon-share-alt"></span></a>
+                    </h1>
 
                     <!-- Galeria de fotos -->
                     <div class="figure-group figure-group-short" data-facebook-gallery='739342236142903'>
@@ -1092,7 +1099,11 @@
 
                     <p>&nbsp;</p>
 
-                    <h1>6º Congresso</h1>
+                    <h1>6º Congresso
+
+                        <!-- Link na integra para o facebook -->
+                        <a target="_blanck" href="https://www.facebook.com/media/set/?set=a.737461069664353.1073741829.725422414201552&type=3" class="btn btn-default btn-xs">Clique aqui e confira o álbum na íntegra <span class="glyphicon glyphicon-share-alt"></span></a>
+                    </h1>
 
                     <!-- Galeria de fotos -->
                     <div class="figure-group figure-group-short" data-facebook-gallery='737461069664353'>
@@ -1245,49 +1256,49 @@
         <!-- VENDOR js: Bootstrap - jquery -->
         <script type="text/javascript" src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
 
-        <!-- VENDOR js: Coffee-Script - jquery -->
-        <script type="text/javascript" src="assets/vendor/coffee-script/coffee-script.min.js"></script>
-
         <!-- VENDOR js: Less - jquery // desabilitado
         <script type="text/javascript" src="assets/vendor/less/less.min.js"></script>
         -->
 
-        <!-- LIBRARY coffe: Coffe for submit form 
-        <script type="text/coffeescript" src="assets/library/coffe/form.app.coffe"></script>
+        <!-- VENDOR js: Coffee-Script - jquery 
+        <script type="text/javascript" src="assets/vendor/coffee-script/coffee-script.min.js"></script>
         -->
 
-        <!-- VENDOR: htmlGetSQL - import library 
+        <!-- VENDOR coffe: htmlGetSQL - import library 
         <script type="text/coffeescript" src="assets/vendor/htmlGetSQL/coffee/pull.coffee"></script>
         -->
 
-        <!-- VENDOR: htmlGetSQL - play aplication 
+        <!-- VENDOR coffe: htmlGetSQL - play aplication 
         <script type="text/coffeescript"> $.pull_values $(document) ; </script>
         -->
 
-        <!-- VENDOR: Inport Images - Facebook 
+        <!-- VENDOR coffe: Inport Images - Facebook 
         <script type="text/coffeescript" src="assets/vendor/importPhotos/importPhotosFace.coffee"></script>
         -->
 
-
-
-        <!-- VENDOR: htmlGetSQL - import library 
+        <!-- LIBRARY coffe: Coffe for submit form 
+        <script type="text/coffeescript" src="assets/library/coffee/form.app.coffee"></script>
         -->
+
+        <!-- LIBRARY coffe: Coffee for URL Get RashTag 
+        <script type="text/javascript" src="assets/library/coffee/url.app.coffee"></script>
+        -->
+
+
+        <!-- VENDOR js: htmlGetSQL - import library -->
         <script type="text/javascript" src="assets/vendor/htmlGetSQL/js/pull.js"></script>
 
-        <!-- VENDOR: htmlGetSQL - play aplication 
-        -->
+        <!-- VENDOR js: htmlGetSQL - play aplication -->
         <script type="text/javascript"> $.pull_values($(document)); </script>
 
-        <!-- VENDOR: Inport Images - Facebook 
-        -->
+        <!-- VENDOR js: Inport Images - Facebook   -->
         <script type="text/javascript" src="assets/vendor/importPhotos/importPhotosFace.js"></script>
 
-        <!-- LIBRARY coffe: Coffee for geral call -->
-        <script type="text/coffeescript" src="assets/library/coffee/geral.app.coffee"></script>
+        <!-- LIBRARY js: Coffee for geral call -->
+        <script type="text/javascript" src="assets/library/js/geral.app.js"></script>
 
-        <!-- LIBRARY coffe: Coffee for URL Get RashTag -->
+        <!-- LIBRARY js: Coffee for URL Get RashTag -->
         <script type="text/javascript" src="assets/library/js/url.app.js"></script>
-
 
     </body>
 </html>
