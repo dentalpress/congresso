@@ -19,7 +19,7 @@
 
     // Valida a origem do post
     if ($post['origem'] != '') {
-        include_once('../../../../../_assets/php/PHPMailer_v5.1/class.phpmailer.php');
+        include_once('../../../../_assets/php/PHPMailer_v5.1/class.phpmailer.php');
         // include_once('../../../../../assets/php/PHPMailer_v5.1/class.phpmailer.php');
 
         $body = '
@@ -92,8 +92,8 @@
     // Funçnao para enviar resposta ao usuario
     function envia_resposta ($post) {
 
-        // include_once('../../../../_assets/php/PHPMailer_v5.1/class.phpmailer.php');
-        include_once('../../../../../assets/php/PHPMailer_v5.1/class.phpmailer.php');
+        include_once('../../../../_assets/php/PHPMailer_v5.1/class.phpmailer.php');;
+        // include_once('../../../../../assets/php/PHPMailer_v5.1/class.phpmailer.php');
 
         $mail = new PHPMailer();
 
