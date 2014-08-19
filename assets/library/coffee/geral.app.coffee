@@ -1,4 +1,10 @@
 # # # # 
+# IDENTIFICA IE
+$("#ie").addClass("hidden") if navigator.appName != "Microsoft Internet Explorer"
+
+
+
+# # # # 
 # TOOGLE SHOW MENU-APP
 
 # configura itens para botão

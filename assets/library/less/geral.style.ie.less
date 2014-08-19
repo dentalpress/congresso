@@ -5,6 +5,30 @@
 // Alinha box no centro
 .boxcenter(@a:50) { @px: (@a - (@a*2)) + 0px; @pc: @a + 0%; margin: 0 auto;  position: relative;  top: @pc;  margin-top: @px;  display: inherit; }
 
+// Exibe IE
+#ie{
+	position: fixed;
+    z-index: 10000000;
+    top: 0px;
+    width: 100%;
+    display: block;
+
+    .browser-list{
+        margin: 15px;
+        .browser-list-item{
+            padding: 0px;
+            display: inline-block;
+            margin: 10px;
+
+            &.browser-firefox{ img{height:100px;}}
+            &.browser-chrome{ img{height:100px;}}
+            &.browser-opera{ img{height:100px;}}
+            &.browser-safari{ img{height:100px;}}
+        }
+    }
+}
+
+
 // Configura documento para a altura em 100%
 html, body {height: 100%;}
 

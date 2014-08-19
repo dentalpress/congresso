@@ -1,3 +1,6 @@
+// Idenfifica IE
+if(navigator.appName!=="Microsoft Internet Explorer"){$("#ie").addClass("hidden")}
+
 // Aplicativos
 var figure,menu;menu={};menu["this"]=$(".menu-group");menu.buttom=menu["this"].find(".btn-menu");menu.menu=menu["this"].find(".menu-group-nav .menu-group-nav-list a");menu.menu.click(function(){menu["this"].removeClass("app-actived");return $("body").css({"overflow-y":"scroll"})});menu.buttom.click(function(){if(menu["this"].hasClass("app-actived")){menu["this"].removeClass("app-actived");return $("body").css({"overflow-y":"scroll"})}else{$("body").css({overflow:"hidden"});return menu["this"].addClass("app-actived")}});figure={};figure.buttom=$(".figure-group-item-mais");figure.group=$(".figure-group");figure.content={};figure.buttom.click(function(){figure.content=$(this).closest(".figure-group");figure.buttom.text("+");if($(figure.content).hasClass("figure-group-short")){$(this).text("-");figure.show=figure.content}else{$(this).text("+");figure.show="<span></span>"}$(figure.group).addClass("figure-group-short");$(figure.show).removeClass("figure-group-short");figure.scroll={};figure.scroll.posicao=$(figure.content).offset().top;return $("html:not(:animated),body:not(:animated)").animate({scrollTop:figure.scroll.posicao-200},1e3)})
 
