@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 $body = '
     <html>
         <meta charset="utf-8" >
@@ -62,7 +62,7 @@ $body = '
                                                                                                 <tbody>
                                                                                                     <tr>
                                                                                                         <td style="font-family: Helvetica; margin: 0px; padding: 9px 18px; color: #404040; font-size: 12px; line-height: 22px;" valign="top">
-                                                                                                            <div style="text-align: center;"><span style="color: #ffffff;"><span style="font-family: \'trebuchet ms\', \'lucida grande\', \'lucida sans unicode\', \'lucida sans\', tahoma, sans-serif;"><span style="font-size: 18px;">30 de abril, 1 e 2 de maio de 2015</span><br>Maringá - PR - Teatro Calil Haddad</span></span></div>
+                                                                                                            <div style="text-align: center;"><span style="color: #ffffff;"><span style="font-family: \'trebuchet ms\', \'lucida grande\', \'lucida sans unicode\', \'lucida sans\', tahoma, sans-serif;"><span style="font-size: 18px;">30 de abril, 1 e 2 de maio de 2015</span><br>Maring&#225; - PR - Teatro Calil Haddad</span></span></div>
                                                                                                         </td>
                                                                                                     </tr>
                                                                                                 </tbody>
@@ -114,7 +114,7 @@ $body = '
                                                                                                                                         <td style="font-family: Helvetica; margin: 0px; padding: 9px 18px; text-align: center; color: #ffffff; font-size: 16px; line-height: 24px;" valign="top">
                                                                                                                                             <div><span style="text-align: left;"><span style="color: #696969;">Prezado</span></span><span style="color: #696969;">(a) Dr(a).</span></div>
                                                                                                                                             <h1 style="margin: 0px; padding: 0px; font-size: 26px; line-height: 32.5px;"><span style="color: #696969;">'.$post['Name'].'</span></h1>
-                                                                                                                                            <div><br><span style="color: #696969;"><span style="font-size: 14px;">Recebemos o seu contato e responderemos o mais breve possível.</span></span><br><br><span style="color: #696969;"><span style="font-size: 14px;">Atenciosamente,</span></span><br><span style="color: #696969;"><span style="font-size: 14px;">Rachel Furquim Marson - Coordenadora do Congresso</span></span></div>
+                                                                                                                                            <div><br><span style="color: #696969;"><span style="font-size: 14px;">Recebemos o seu contato e responderemos o mais breve poss&#237;vel.</span></span><br><br><span style="color: #696969;"><span style="font-size: 14px;">Atenciosamente,</span></span><br><span style="color: #696969;"><span style="font-size: 14px;">Rachel Furquim Marson - Coordenadora do Congresso</span></span></div>
                                                                                                                                         </td>
                                                                                                                                     </tr>
                                                                                                                                 </tbody>
@@ -130,7 +130,7 @@ $body = '
                                                                                                                             <table style="border: 2px solid #f2f2f2; border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; table-layout: fixed;" border="0" cellspacing="0" cellpadding="0">
                                                                                                                                 <tbody>
                                                                                                                                     <tr>
-                                                                                                                                        <td style="font-family: Arial; margin: 0px; font-size: 16px; padding: 5px;" align="center" valign="middle"><a style="color: #29355a; font-weight: bold; line-height: 16px; text-decoration: none; word-wrap: break-word; display: block;" title="8º Congresso Internacional Dental Press" href="http://www.dentalpress.com.br/congresso" target="_blank">8º Congresso Internacional Dental Press</a></td>
+                                                                                                                                        <td style="font-family: Arial; margin: 0px; font-size: 16px; padding: 5px;" align="center" valign="middle"><a style="color: #29355a; font-weight: bold; line-height: 16px; text-decoration: none; word-wrap: break-word; display: block;" title="8&#186; Congresso Internacional Dental Press" href="http://www.dentalpress.com.br/congresso" target="_blank">8&#186; Congresso Internacional Dental Press</a></td>
                                                                                                                                     </tr>
                                                                                                                                 </tbody>
                                                                                                                             </table>
@@ -229,7 +229,7 @@ $body = '
                                                                                                         <td style="font-family: Helvetica; margin: 0px; padding: 9px 18px; color: #aaaaaa; line-height: 18.5px; text-align: center;" valign="top">
                                                                                                             <div><span style="color: #000000;"><img style="outline: none;" src="https://ci3.googleusercontent.com/proxy/zcrf7EpkmRhIB75FvII9CFAEstBJphhXI1Tb6DnRRGS98ENqur0yHL2DnsNsubGR2ELP-LJHfQxd6iM3j4MFGafc8a5ofN26Ps4WTuq28Sdn_dQc4vpBrBz1NJ_9FxCI3xJNd5tJkw=s0-d-e1-ft#http://www.dentalpress.com.br/portal/wp-content/themes/dental/assets/img/logo.jpg" alt="" width="150px">&nbsp;</span></div>
                                                                                                             <h3 style="margin: 0px; padding: 0px; font-size: 18px; line-height: 25px; color: #c76f72 !important;"><span style="color: #000000;"><a style="color: #1155cc;" href="http://www.dentalpress.com.br/" target="_blank">www.dentalpress.com.br</a></span></h3>
-                                                                                                            <div><span style="color: #000000; font-size:12px">Dental Press Ensino e Pesquisa Ltda. CNPJ 80.898.828/0001-48<br>&nbsp;Av. Luiz Teixeira Mendes, 2712 / Maringá - Paraná - Brasil<br>CEP 87015-001 / Telefone: (44) 3033-9818</span></div>
+                                                                                                            <div><span style="color: #000000; font-size:12px">Dental Press Ensino e Pesquisa Ltda. CNPJ 80.898.828/0001-48<br>&nbsp;Av. Luiz Teixeira Mendes, 2712 / Maring&#225; - Paran&#225; - Brasil<br>CEP 87015-001 / Telefone: (44) 3033-9818</span></div>
                                                                                                         </td>
                                                                                                     </tr>
                                                                                                 </tbody>

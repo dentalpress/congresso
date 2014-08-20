@@ -12,6 +12,7 @@
 
     $post = $_POST;
 
+
     // processo o titulo para um html especial
     // $post['curso']['nome'] = htmlspecialchars($post['curso']['nome']);
 
@@ -21,6 +22,14 @@
     if ($post['origem'] != '') {
         include_once('../../../../_assets/php/PHPMailer_v5.1/class.phpmailer.php');
         // include_once('../../../../../assets/php/PHPMailer_v5.1/class.phpmailer.php');
+
+        // padroniza
+        $post['origem'] = utf8_decode($post['origem']);
+        $post['curso']['nome'] = utf8_decode($post['curso']['nome']);
+        $post['Name'] = utf8_decode($post['Name']);
+        $post['Phone'] = utf8_decode($post['Phone']);
+        $post['Email'] = utf8_decode($post['Email']);
+        $post['Msg'] = utf8_decode($post['Msg']);
 
         $body = '
             <html>
@@ -63,8 +72,8 @@
         $mail->SMTPAuth   = true; // enable SMTP authentication
         
         $mail->From     = $mail->Username;
-        $mail->FromName = html_entity_decode( 'Contato: '.utf8_decode($post['curso']['nome']).' - '.utf8_decode($post['Name']));
-        $mail->Subject  = html_entity_decode( 'Contato: '.utf8_decode($post['curso']['nome']).' - '.utf8_decode($post['Name']));
+        $mail->FromName = html_entity_decode( 'Contato: '.$post['curso']['nome'].' - '.$post['Name']);
+        $mail->Subject  = html_entity_decode( 'Contato: '.$post['curso']['nome'].' - '.$post['Name']);
 
         $mail->AltBody    = $altBody; //Text Body
         $mail->WordWrap   = 50; // set word wrap
@@ -117,7 +126,7 @@
         $mail->SMTPAuth   = true; // enable SMTP authentication
         
         $mail->From     = $mail->Username;
-        $mail->FromName = html_entity_decode( 'Contato: '.utf8_decode($post['curso']['nome']).' - '.utf8_decode($post['Name']));
+        $mail->FromName = html_entity_decode( 'Contato: '.$post['curso']['nome'].' - '.$post['Name']);
         $mail->Subject  = html_entity_decode( 'Contato recebido');
 
         $mail->AltBody    = $altBody; //Text Body
