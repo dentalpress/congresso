@@ -690,6 +690,8 @@
 
                                     <input id="curso[nome]" name="curso[nome]" type="hidden" value="8º Congresso Internacional Dental Press">
 
+                                    <input id="curso[tipo]" name="curso[tipo]" type="hidden" value="contato">
+
                                     <!-- Nome -->
                                     <div class="form-group col-md-12">
                                         <input id="Name" name="Name" type="text" placeholder="Seu nome" class="form-control input-lg text-center" required="">
@@ -1227,21 +1229,22 @@
                             <fieldset class="col-xs-12 col-sm-7 col-md-5 col-lg-5 col-xs-offset-0 col-sm-offset-1 col-md-offset-3 col-lg-offset-3">
 
                                 <!-- Nome do formulário -->
-                                <input id="origem" name="origem" type="hidden" value="trabalhos">
+                                <input id="origem" name="origem" type="hidden">
 
-                                <input id="curso[nome]" name="curso[nome]" type="hidden" value="8º Congresso Internacional Dental Press">
+                                <input id="origem-nome" name="origem-nome" type="hidden" value="8º Congresso Internacional Dental Press">
+                                <input id="origem-tipo" name="origem-tipo" type="hidden" value="trabalho">
 
 
                                 <h4>Dados do autor</h4>
 
                                 <!-- nome -->
                                 <div class="form-group col-md-12">
-                                    <input id="nome" name="nome" type="text" placeholder="Nome" class="form-control input-lg text-center" required="">
+                                    <input value='Nome' id="nome" name="nome" type="text" placeholder="Nome" class="form-control input-lg text-center" required="">
                                 </div>
 
                                 <!-- Autor -->
                                 <div class="form-group col-md-12">
-                                    <input id="email" name="email" type="email" placeholder="email" class="form-control input-lg text-center" required="">
+                                    <input value='Email@algo.com' id="email" name="email" type="email" placeholder="email" class="form-control input-lg text-center" required="">
                                 </div>
 
                                 <div class="col-md-12">
@@ -1252,47 +1255,47 @@
 
                                 <div class="form-group col-md-12">
                                     <label class="radio-inline">
-                                        <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" required=""> <b>Pesquisa</b>
+                                        <input checked="checked" type="radio" name="tipo" id="tipo" value="Pesquisa" required=""> <b>Pesquisa</b>
                                     </label>
                                     <label class="radio-inline">
-                                        <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" required=""> <b>Caso Clínico</b>
+                                        <input type="radio" name="tipo" id="tipo" value="Caso Clínico" required=""> <b>Caso Clínico</b>
                                     </label>
                                 </div>
 
                                 <!-- Títilo -->
                                 <div class="form-group col-md-12">
-                                    <input id="Título" name="Titulo" type="text" placeholder="Título" class="form-control input-lg text-center" required="">
+                                    <input value='Título' id="titulo" name="titulo" type="text" placeholder="Título" class="form-control input-lg text-center" required="">
                                 </div>
 
                                 <!-- Autor -->
                                 <div class="form-group col-md-12">
-                                    <input id="Autor" name="Autor" type="text" placeholder="Autor" class="form-control input-lg text-center" required="">
+                                    <input value='Autor1' id="autor" name="autor" type="text" placeholder="Autor" class="form-control input-lg text-center" required="">
                                 </div>
 
                                 <!-- Co-Autor -->
                                 <div class="form-group col-md-12">
-                                    <input id="coAutor" name="coAutor" type="text" placeholder="Co-Autores" class="form-control input-lg text-center">
+                                    <input value='Coautor, Autor2' id="co-autor" name="co-autor" type="text" placeholder="Co-Autores" class="form-control input-lg text-center">
                                 </div>
 
-                                <!-- Títilo -->
+                                <!-- Instituicao -->
                                 <div class="form-group col-md-12">
-                                    <input id="Instituicao" name="Instituicao" type="text" placeholder="Instituição" class="form-control input-lg text-center" required="">
+                                    <input value='Dental Press' id="instituicao" name="instituicao" type="text" placeholder="Instituição" class="form-control input-lg text-center" required="">
                                 </div>
 
                                 <!-- Mensagem -->
                                 <div class="form-group col-md-12">
-                                    <textarea class="form-control input-lg text-justfy" id="resumo" name="resumo" placeholder="Resumo do trabalho" style="height:300px"></textarea>
+                                    <textarea id="resumo" name="resumo" placeholder="Resumo do trabalho" class="form-control input-lg text-justfy" style="height:300px">Qualquer coisa</textarea>
                                 </div>
 
                                 <!-- Palavra-chave -->
                                 <div class="form-group col-md-12">
-                                    <input id="palavrasChave" name="palavrasChave" type="text" placeholder="Palavras-Chave" class="form-control input-lg text-center" required="">
+                                    <input value='palavra-chave' id="palavras-chave" name="palavras-chave" type="text" placeholder="Palavras-Chave" class="form-control input-lg text-center" required="">
                                 </div>
 
                                 <!-- Button -->
                                 <div class="col-md-12 col-sm-12 col-xs-12">
                                     <div class="form-group col-md-12 col-sm-12 col-xs-12">
-                                        <button data-loading-text="Submetendo <span class='glyphicon glyphicon-envelope'></span>" id="send" name="send" class="btn btn-primary btn-lg">Enviar trabalho</button>
+                                        <button data-loading-text="Submetendo <span class='glyphicon glyphicon-envelope'></span>" id="sendTrabalho" name="sendTrabalho" class="btn btn-primary btn-lg">Enviar trabalho</button>
 
                                         <!-- Quando o envio for um sucesso -->
                                         <p class="text-success form-success hidden">
@@ -1522,8 +1525,8 @@
         -->
 
         <!-- VENDOR js: Coffee-Script - jquery 
-        <script type="text/javascript" src="assets/vendor/coffee-script/coffee-script.min.js"></script>
         -->
+        <script type="text/javascript" src="assets/vendor/coffee-script/coffee-script.min.js"></script>
 
         <!-- VENDOR coffe: htmlGetSQL - import library 
         <script type="text/coffeescript" src="assets/vendor/htmlGetSQL/coffee/pull.coffee"></script>
@@ -1538,8 +1541,8 @@
         -->
 
         <!-- LIBRARY coffe: Coffe for submit form 
-        <script type="text/coffeescript" src="assets/library/coffee/form.app.coffee"></script>
         -->
+        <script type="text/coffeescript" src="assets/library/coffee/form.app.coffee"></script>
 
         <!-- LIBRARY coffe: Coffee for URL Get RashTag 
         <script type="text/javascript" src="assets/library/coffee/url.app.coffee"></script>
