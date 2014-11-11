@@ -199,11 +199,8 @@
                             </li>
                         </ul>
                     </div>
-
-
                 </div>
             </nav>
-
         </header>
 
         <!-- Contents do conteúdo enteiro -->
@@ -686,30 +683,30 @@
                                 <fieldset>
 
                                     <!-- Nome do formulário -->
-                                    <input id="origem" name="origem" type="hidden">
+                                    <input id="origem" name="origem[origem]" type="hidden">
 
-                                    <input id="curso[nome]" name="curso[nome]" type="hidden" value="8º Congresso Internacional Dental Press">
+                                    <input id="curso-nome" name="origem[nome]" type="hidden" value="8º Congresso Internacional Dental Press">
 
-                                    <input id="curso[tipo]" name="curso[tipo]" type="hidden" value="contato">
+                                    <input id="curso-tipo" name="origem[tipo]" type="hidden" value="contato">
 
                                     <!-- Nome -->
                                     <div class="form-group col-md-12">
-                                        <input id="Name" name="Name" type="text" placeholder="Seu nome" class="form-control input-lg text-center" required="">
+                                        <input id="nome" name="nome" type="text" placeholder="Seu nome" class="form-control input-lg text-center" required="">
                                     </div>
 
                                     <!-- Telefone -->
                                     <div class="form-group col-md-12">
-                                        <input id="Phone" name="Phone" type="text" placeholder="Seu telefone - (00) 0000-0000" class="form-control input-lg text-center" required="">
+                                        <input id="phone" name="phone" type="text" placeholder="Seu telefone - (00) 0000-0000" class="form-control input-lg text-center" required="">
                                     </div>
 
                                     <!-- E-mail-->
                                     <div class="form-group col-md-12">
-                                        <input id="Email" name="Email" type="text" placeholder="Seu email" class="form-control input-lg text-center" required="">
+                                        <input id="email" name="email" type="text" placeholder="Seu email" class="form-control input-lg text-center" required="">
                                     </div>
 
                                     <!-- Mensagem -->
                                     <div class="form-group col-md-12">
-                                        <textarea class="form-control input-lg text-center" id="Msg" name="Msg" placeholder="Digite uma mensagem ..."></textarea>
+                                        <textarea class="form-control input-lg text-center" id="msg" name="msg" placeholder="Digite uma mensagem ..."></textarea>
                                     </div>
 
                                     <!-- Button -->
@@ -1239,12 +1236,12 @@
 
                                 <!-- nome -->
                                 <div class="form-group col-md-12">
-                                    <input value='Nome' id="nome" name="nome" type="text" placeholder="Nome" class="form-control input-lg text-center" required="">
+                                    <input id="nome" name="nome" type="text" placeholder="Nome" class="form-control input-lg text-center" required="">
                                 </div>
 
                                 <!-- Autor -->
                                 <div class="form-group col-md-12">
-                                    <input value='Email@algo.com' id="email" name="email" type="email" placeholder="email" class="form-control input-lg text-center" required="">
+                                    <input id="email" name="email" type="email" placeholder="email" class="form-control input-lg text-center" required="">
                                 </div>
 
                                 <div class="col-md-12">
@@ -1255,61 +1252,58 @@
 
                                 <div class="form-group col-md-12">
                                     <label class="radio-inline">
-                                        <input checked="checked" type="radio" name="tipo" id="tipo" value="Pesquisa" required=""> <b>Pesquisa</b>
+                                        <input maxlength="100" id="tipo" name="tipo" type="radio" value="Pesquisa" required=""> <b>Pesquisa</b>
                                     </label>
                                     <label class="radio-inline">
-                                        <input type="radio" name="tipo" id="tipo" value="Caso Clínico" required=""> <b>Caso Clínico</b>
+                                        <input maxlength="100" id="tipo" name="tipo" type="radio" value="Caso Clínico" required=""> <b>Caso Clínico</b>
                                     </label>
                                 </div>
 
                                 <!-- Títilo -->
                                 <div class="form-group col-md-12">
-                                    <input value='Título' id="titulo" name="titulo" type="text" placeholder="Título" class="form-control input-lg text-center" required="">
+                                    <input maxlength="250" id="titulo" name="titulo" type="text" placeholder="Título" class="form-control input-lg text-center" required="">
                                 </div>
 
                                 <!-- Autor -->
                                 <div class="form-group col-md-12">
-                                    <input value='Autor1' id="autor" name="autor" type="text" placeholder="Autor" class="form-control input-lg text-center" required="">
+                                    <input maxlength="100" id="autor" name="autor" type="text" placeholder="Autor" class="form-control input-lg text-center" required="">
                                 </div>
 
                                 <!-- Co-Autor -->
                                 <div class="form-group col-md-12">
-                                    <input value='Coautor, Autor2' id="co-autor" name="co-autor" type="text" placeholder="Co-Autores" class="form-control input-lg text-center">
+                                    <input maxlength="100" id="co-autor" name="co-autor" type="text" placeholder="Co-Autores" class="form-control input-lg text-center">
                                 </div>
 
                                 <!-- Instituicao -->
                                 <div class="form-group col-md-12">
-                                    <input value='Dental Press' id="instituicao" name="instituicao" type="text" placeholder="Instituição" class="form-control input-lg text-center" required="">
+                                    <input maxlength="100" id="instituicao" name="instituicao" type="text" placeholder="Instituição" class="form-control input-lg text-center" required="">
                                 </div>
 
                                 <!-- Mensagem -->
                                 <div class="form-group col-md-12">
-                                    <textarea id="resumo" name="resumo" placeholder="Resumo do trabalho" class="form-control input-lg text-justfy" style="height:300px">Qualquer coisa</textarea>
+                                    <textarea id="resumo" name="resumo" placeholder="Resumo do trabalho" class="form-control input-lg text-justfy" style="height:300px"></textarea>
                                 </div>
 
                                 <!-- Palavra-chave -->
                                 <div class="form-group col-md-12">
-                                    <input value='palavra-chave' id="palavras-chave" name="palavras-chave" type="text" placeholder="Palavras-Chave" class="form-control input-lg text-center" required="">
+                                    <input maxlength="100" id="palavras-chave" name="palavras-chave" type="text" placeholder="Palavras-Chave" class="form-control input-lg text-center" required="">
                                 </div>
 
                                 <!-- Button -->
                                 <div class="col-md-12 col-sm-12 col-xs-12">
                                     <div class="form-group col-md-12 col-sm-12 col-xs-12">
-                                        <button data-loading-text="Submetendo <span class='glyphicon glyphicon-envelope'></span>" id="sendTrabalho" name="sendTrabalho" class="btn btn-primary btn-lg">Enviar trabalho</button>
+                                        <button data-loading-text="Submetendo <span class='glyphicon glyphicon-envelope'></span>" id="send" name="send" class="btn btn-primary btn-lg">Enviar trabalho</button>
 
                                         <!-- Quando o envio for um sucesso -->
                                         <p class="text-success form-success hidden">
                                             <span class='glyphicon glyphicon-ok-sign'></span> 
-                                            Agradecemos pelo seu contato. Em breve, você receberá uma resposta.
+                                            <span>Agradecemos a inscrição do seu trabalho, tão logo a Comissão Organizadora o avalie, você receberá uma resposta de confirmação nossa.</span>
                                         </p>
 
                                         <!-- Quando o envio der errado -->
                                         <p class="text-danger form-erro hidden">
                                             <span class='glyphicon glyphicon-exclamation-sign'></span> 
-                                            Ops! Ocorreu um erro, recarrege a página e tente novamente ou 
-                                            entre em contato pelo email <strong class="text-primary">congresso@dentalpres.com.br</strong>, 
-                                            ou pelos telefones <strong class="text-primary">0800 600 9818</strong> e 
-                                            <strong class="text-primary">(44) 3033-9818</strong> de segunda a sexta em horário comercial.
+                                            <span>Ops! Ocorreu um erro, recarrege a página e tente novamente ou entre em contato pelo email <strong class="text-primary">congresso@dentalpres.com.br</strong>, ou pelos telefones <strong class="text-primary">0800 600 9818</strong> e <strong class="text-primary">(44) 3033-9818</strong> de segunda a sexta em horário comercial.</span>
                                         </p>
                                     </div>
                                 </div>

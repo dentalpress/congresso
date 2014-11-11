@@ -1,44 +1,28 @@
 # função enviar para php #
 $.submt_post = (value) ->
-    
-    # ativa enviar no botão
-    # btn.button('loading');
+
+    # # #
+    # value = valores para conexao e busca no banco
+    # # #
+
+    console.log 'oi';
+
+    # Função ajax
     $.ajax(
         type: "post"
-        url: "../congresso/assets/library/php/submit.php"
+        url: "../congresso/assets/library/php/submit.php" #local no php
         cache: false
-        #dataType: "json"
         data: value
         async: false
     )
-    # quando pronto
-    .done (data) ->
-        #remove o load no botão
-        # btn.addClass('hidden');
 
-        console.log data
-        # caso enviada a mensagem
-        if data is 'enviado'
-            $('.form-success').removeClass('hidden') 
+    # resultado de retorno
+    .done (data) -> 
+        # console.log data # exibe valor de data
+        value = data
 
-        # caso não tenha sido enviada a mensagem
-        if data != 'enviado'
-            $('.form-erro').removeClass('hidden') 
-
-
-# # # # # # #
-# # Função trata json
-trataString = (str)->
-    # substiu valores
-    str = str.replace('\\', '\\\\').replace('{', '\\{').replace('}', '\\}').replace('"', '\\"').replace('"', '\\"').replace(':', '\\:')
-
-    #rerotna a solicitação
-    return str
-
-# # Função trata json
-# # # # # # #
-
-
+    # retorna value a solicitação com 'eval()'
+    return eval(value)
 
 
 # # # # # # #
@@ -77,6 +61,12 @@ $("form").on "submit", ->
     # captura a url base e aplica no hidden origem
     $(this).find("#origem").val($(this)["context"]["baseURI"])
 
+    # define o botão
+    btn = $(this).find('#send')
+
+    # add loading em btn
+    btn.addClass('hidden')
+
     # verifica se a solicitação vem do fomumlário trabalho
     if $(this).find("#origem-tipo").val() is 'trabalho'
 
@@ -91,35 +81,44 @@ $("form").on "submit", ->
 
             # reserva cada valor conforme o seu campo
             switch temp.form.array[temp.count].name
+
                 when 'origem'
-                    trabalho.origem.origem = trataString(temp.form.array[temp.count].value)
+                    trabalho.origem.origem = temp.form.array[temp.count].value
 
                 when 'origem-nome'
-                    trabalho.origem.nome = trataString(temp.form.array[temp.count].value)
+                    trabalho.origem.nome = temp.form.array[temp.count].value
 
                 when 'origem-tipo'
-                    trabalho.origem.tipo = trataString(temp.form.array[temp.count].value)
+                    trabalho.origem.tipo = temp.form.array[temp.count].value
 
                 when 'nome'
-                    trabalho.contato.nome = trataString(temp.form.array[temp.count].value)
+                    trabalho.contato.nome = temp.form.array[temp.count].value
 
                 when 'email'
-                    trabalho.contato.email = trataString(temp.form.array[temp.count].value)
+                    trabalho.contato.email = temp.form.array[temp.count].value
 
                 else
-                    trabalho.trabalho[temp.form.array[temp.count].name] = trataString(temp.form.array[temp.count].value)
+                    trabalho.trabalho[temp.form.array[temp.count].name] = temp.form.array[temp.count].value
 
             # adiciona +1 em @temp.count
             temp.count++
 
         # envia a função post
-        $.submit_post trabalho
+        success = $($.submt_post trabalho)['0'].success
+
 
     # verifica se a solicitação vem do fomulário contato
-    if $(this).find("#origem-type").val() is 'contato'
+    if $(this).find("#curso-tipo").val() is 'contato'
 
         # envia ao php o valor de this com serialize
-        $.submt_post $(this).serialize()
+        success = $($.submt_post $(this).serialize())['0'].success
+
+    if success is true
+        $(this).find('.form-success').removeClass('hidden')
+
+    if success is false
+        $(this).find('.form-erro').removeClass('hidden')
+
 
     # btn.button('reset')
     return false
