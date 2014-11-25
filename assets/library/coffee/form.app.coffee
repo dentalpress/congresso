@@ -5,7 +5,7 @@ $.submt_post = (value) ->
     # value = valores para conexao e busca no banco
     # # #
 
-    console.log 'oi';
+    console.log 'oi'
 
     # Função ajax
     $.ajax(
@@ -20,7 +20,7 @@ $.submt_post = (value) ->
     .done (data) -> 
         # console.log data # exibe valor de data
         value = data
-
+        console.log value
     # retorna value a solicitação com 'eval()'
     return eval(value)
 
@@ -34,9 +34,7 @@ $.submt_post = (value) ->
 # define @temp
 temp = {};
 
-# define @temp.form
-temp.form = {}
-
+# define @temp.formform
 # define @trabalho
 trabalho = {}
 
@@ -49,6 +47,8 @@ trabalho.trabalho = {}
 # define @trabalho.contato
 trabalho.contato = {}
 
+# define success 
+success = {}
 
 # define [objects Object] globais
 # # #
@@ -71,34 +71,34 @@ $("form").on "submit", ->
     if $(this).find("#origem-tipo").val() is 'trabalho'
 
         # monta [object Object] para enviar em post
-        temp.form.array = $(this).serializeArray()
+        temp.form = $(this).serializeArray()
 
         # define em @temp.count 0
         temp.count = 0
 
         # # inicia laço para selecionar cada item de select
-        while temp.count < temp.form.array.length
+        while temp.count < temp.form.length
 
             # reserva cada valor conforme o seu campo
-            switch temp.form.array[temp.count].name
+            switch temp.form[temp.count].name
 
                 when 'origem'
-                    trabalho.origem.origem = temp.form.array[temp.count].value
+                    trabalho.origem.origem = temp.form[temp.count].value
 
                 when 'origem-nome'
-                    trabalho.origem.nome = temp.form.array[temp.count].value
+                    trabalho.origem.nome = temp.form[temp.count].value
 
                 when 'origem-tipo'
-                    trabalho.origem.tipo = temp.form.array[temp.count].value
+                    trabalho.origem.tipo = temp.form[temp.count].value
 
                 when 'nome'
-                    trabalho.contato.nome = temp.form.array[temp.count].value
+                    trabalho.contato.nome = temp.form[temp.count].value
 
                 when 'email'
-                    trabalho.contato.email = temp.form.array[temp.count].value
+                    trabalho.contato.email = temp.form[temp.count].value
 
                 else
-                    trabalho.trabalho[temp.form.array[temp.count].name] = temp.form.array[temp.count].value
+                    trabalho.trabalho[temp.form[temp.count].name] = temp.form[temp.count].value
 
             # adiciona +1 em @temp.count
             temp.count++

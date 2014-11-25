@@ -192,6 +192,9 @@ include 'sql.selector.php';
                 # acrecenta em @temp>new>history>montagem>date a string '0000-00-00 00:00:00'
                 $temp['new']['montagem']['date'] = date('Y-m-d').' '.date('h:i:s');
 
+                #adiciona data em values
+                $temp['values']['data de submissao'] = $temp['new']['montagem']['date'];
+
                 # acrecenta em @temp>new>history>montagem>md5 o valor do md5 dade + sku do select + o sku do registro
                 $temp['new']['montagem']['md5'] = md5(
                     $temp['new']['montagem']['date'].

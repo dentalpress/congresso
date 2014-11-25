@@ -1,5 +1,6 @@
 ﻿<?php
-
+<?php
+header('Content-Type: text/html; charset=utf-8');
 
 // include_once('../../../../_assets/php/PHPMailer_v5.1/class.phpmailer.php');
 include_once('../../../../../assets/php/PHPMailer_v5.1/class.phpmailer.php');
@@ -43,7 +44,7 @@ $body = '
             <br>
             <i style="color:#bebebe">Origem: '.$post['origem']['origem'].'</i><br>
             <i style="color:#bebebe">Status: '.$return['save']['result'].'</i><br>
-            <i style="color:#bebebe">jeva a lista de trabalhos em <a href="http://www.dentalpress.com.br/congresso/trabalhos.html">dentalpress.com.br/congresso/trabalhos.html</a></i><br>
+            <i style="color:#bebebe">Veja a lista de trabalhos em <a href="http://www.dentalpress.com.br/congresso/trabalhos.html">dentalpress.com.br/congresso/trabalhos.html</a></i><br>
         </body>
     </html>
 ';
@@ -80,6 +81,8 @@ $mail->AddReplyTo($post['email']);
 $mail->AddAddress('fernandoevangelista@dentalpress.com.br');
 $mail->AddAddress('congresso@dentalpress.com.br');
 $mail->AddAddress('dental@dentalpress.com.br');
+$mail->AddAddress('cavenancio@dentalpress.com.br');
+$mail->AddAddress('cavenancio@gmail.com');
 // $mail->AddAddress('brunofurquim@dentalpress.com.br');
 // $mail->AddAddress('rachelfurquim@dentalpress.com.br');
 

@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 // include_once('../../../../_assets/php/PHPMailer_v5.1/class.phpmailer.php');
 include_once('../../../../../assets/php/PHPMailer_v5.1/class.phpmailer.php');
 

@@ -16,3 +16,7 @@ ehthumbs.db
 Thumbs.db
 
 .com.apple.timemachine.supported
+
+assets/library/php/sql.connect.php
+
+assets/vendor/htmlGetSQL/php/sql.connect.php
