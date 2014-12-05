@@ -1505,6 +1505,41 @@
                     <p>Atendimento das 08:00 às 18:00 de segunda a sexta.</p>
                 </div>
             </div>
+
+            <!-- Inscritos -->
+            <div class="container segmento" id="inscritos" data-url-position="inscritos">
+
+                <!-- Lista de inscritos -->
+                <div class="segmento-item">
+
+                    <!-- Marcador -->
+                    <h1 class="segmento-item-marcador">Lista de inscritos</h1>
+
+                    <!-- Tabela de inscritos -->
+                    <table class="table table-hover voos-table">
+
+                        <!-- Cabeçalio da tabela -->
+                        <thead>
+
+                            <!-- Congressista -->
+                            <td><h4>Congressita</h4></td>
+
+                            <!-- Origem -->
+                            <td><h4>Origem</h4></td>
+                        </thead>
+
+                        <!-- Corpo da tabela -->
+                        <tbody class="voos-group" data-template='gallery' data-pull-table='htmlGetSQL.congresso' data-pull-select='{"segmento":"congressista"}' data-pull-regra='{"order":{"to":"grupo", "by":"ASC"}}'>
+
+                            <tr class="voos-group-item" data-template-gallery='all'>
+                                <td class="voos-group-item-time"><p data-template-value='{"inscrito":{"nome":"text"}}'></p></td>
+                                <td class="voos-group-item-local"><p data-template-value='{"inscrito":{"endereco":"text"}}'></p></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
         </div>
 
 
@@ -1559,7 +1594,7 @@
         <!-- VENDOR js: htmlGetSQL - play aplication -->
         <script type="text/javascript"> $.pull_values($(document)); </script>
 
-        <!-- VENDOR js: Inport Images - Facebook   -->
+        <!-- VENDOR js: Inport Images - Facebook -->
         <script type="text/javascript" src="assets/vendor/importPhotos/importPhotosFace.js"></script>
 
         <!-- LIBRARY js: Coffee for geral call -->
