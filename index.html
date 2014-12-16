@@ -1526,17 +1526,17 @@
                         <thead>
 
                             <!-- Congressista -->
-                            <td><h4>Congressita</h4></td>
+                            <td><h4>Congressistas</h4></td>
 
                             <!-- Origem -->
-                            <td><h4>Origem</h4></td>
+                            <td><!-- <h4>Origem</h4> --></td>
                         </thead>
 
                         <!-- Corpo da tabela -->
-                        <tbody class="voos-group" data-template='gallery' data-pull-table='htmlGetSQL.congresso' data-pull-select='{"segmento":"congressista"}' data-pull-regra='{"order":{"to":"grupo", "by":"ASC"}}'>
+                        <tbody class="voos-group" data-template='gallery' data-pull-table='htmlGetSQL.congresso' data-pull-select='{"segmento":"congressista"}' data-pull-regra='{"order":{"to":"index", "by":"ASC"}}'>
 
                             <tr class="voos-group-item" data-template-gallery='all'>
-                                <td class="voos-group-item-time"><p data-template-value='{"inscrito":{"nome":"text"}}'></p></td>
+                                <td class="voos-group-item-time"><p><span data-template-value='{"inscricao":{"ordem":"text"}}'></span> - <span data-template-value='{"inscrito":{"nome":"text"}}'><span></p></td>
                                 <td class="voos-group-item-local"><p data-template-value='{"inscrito":{"endereco":"text"}}'></p></td>
                             </tr>
                         </tbody>
